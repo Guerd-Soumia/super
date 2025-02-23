@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovateX - Project Needs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Updated Color Palette */
+        :root {
+            --primary: #1E201E;  /* Dark Grey */
+            --secondary: #4c4d4982; /* Muted Green-Grey */
+            --accent: #1E201E;   /* Soft Green */
+            --light: #ECDFCC;    /* Light Beige */
+            --text-light: #1E201E; /* Light text color for contrast */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--light);
+            font-family: 'Segoe UI', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            color: var(--light);
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Go Back Button Styles */
+        .go-back-button {
+            background-color: var(--light); /* Box color: #ECDFCC */
+            color: var(--primary); /* Text color: #1E201E */
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .go-back-button:hover {
+            background-color: var(--accent); /* Hover background: #1E201E */
+            color: var(--light); /* Hover text color: #ECDFCC */
+        }
+
+        /* Category Selection Section */
+        .category-selection {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .registration-content h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--primary); /* Updated to use #1E201E */
+        }
+
+        .category-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .category-card {
+            flex: 1 1 300px;
+            max-width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            background: var(--secondary);
+            color: var(--primary);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        .category-card:hover {
+            background-color: var(--accent);
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        .category-card i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        .category-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .category-card p {
+            font-size: 1rem;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 10px 0;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-content ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-content ul li {
+            margin-left: 20px;
+        }
+
+        .footer-content ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-content ul li a:hover {
+            color: var(--accent);
+        }
+
+        .footer-content .social-icons a {
+            color: var(--text-light);
+            margin-left: 15px;
+            font-size: 20px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .footer-content .social-icons a:hover {
+            color: var(--accent);
+            transform: scale(1.2);
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .category-selection {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">InnovateX</a>
+            <nav class="nav-links">
+                <a href="needs.html" class="go-back-button">Go Back</a> <!-- Go Back button -->
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="category-selection">
+        <div class="registration-content">
+            <h2>Project Support Categories</h2>
+            <div class="category-cards">
+                <!-- Team Building -->
+                <a href="need2.html" class="category-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Team Building</h3>
+                    <p>Assemble skilled teams for project execution</p>
+                </a>
+
+                <!-- Financial Support -->
+                <a href="need2.html" class="category-card">
+                    <i class="fas fa-coins"></i>
+                    <h3>Financial Support</h3>
+                    <p>Funding solutions and financial strategies</p>
+                </a>
+
+                <!-- Legal Planning -->
+                <a href="need2.html" class="category-card">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Legal Planning</h3>
+                    <p>Legal framework and compliance strategies</p>
+                </a>
+
+                <!-- Expert Consultation -->
+                <a href="need2.html" class="category-card">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Expert Consultation</h3>
+                    <p>Professional guidance from specialists</p>
+                </a>
+
+                <!-- Other Requirements -->
+                <a href="need2.html" class="category-card">
+                    <i class="fas fa-plus-circle"></i>
+                    <h3>Other Requirements</h3>
+                    <p>Special requests and unique needs</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 InnovateX. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

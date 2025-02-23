@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnovateX - Success Celebration</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #007BFF;       /* Professional Blue */
+      --secondary: #6c757d;     /* Gray */
+      --accent: #28a745;        /* Green */
+      --dark: #343a40;          /* Dark Gray */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Floating Particles Background */
+    body::before {
+      content: '';
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='10' fill='%23007BFF'/%3E%3Ccircle cx='800' cy='200' r='8' fill='%236c757d'/%3E%3Ccircle cx='300' cy='700' r='12' fill='%2328a745'/%3E%3C/svg%3E");
+      opacity: 0.1;
+      z-index: -1;
+      animation: float 20s linear infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) translateX(0); }
+      50% { transform: translateY(-50px) translateX(50px); }
+      100% { transform: translateY(0) translateX(0); }
+    }
+
+    /* Professional Navigation */
+    nav {
+      background: rgba(207, 219, 248, 0.9);
+      padding: 1rem 2rem;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    nav::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+    }
+
+    .logo {
+      color: var(--dark);
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    /* Celebration Card */
+    .thank-you {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .celebration-card {
+      background: rgba(206, 206, 207, 0.95);
+      border-radius: 10px;
+      padding: 3rem;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transform-style: preserve-3d;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    .celebration-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, 
+        var(--primary) 0%, 
+        var(--secondary) 50%, 
+        var(--accent) 100%);
+      opacity: 0.1;
+      transform: rotate(45deg);
+      animation: gradientFlow 8s infinite linear;
+    }
+
+    @keyframes gradientFlow {
+      0% { transform: rotate(45deg) translateX(0); }
+      100% { transform: rotate(45deg) translateX(-50%); }
+    }
+
+    .checkmark {
+      font-size: 4rem;
+      color: var(--accent);
+      animation: bounce 1s ease infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background: var(--accent);
+      animation: confettiFall 3s linear infinite;
+    }
+
+    @keyframes confettiFall {
+      0% { transform: translateY(-100vh) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(360deg); }
+    }
+
+    /* Generate random confetti */
+    .confetti:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .confetti:nth-child(2) { left: 20%; animation-delay: 0.5s; background: var(--primary); }
+    .confetti:nth-child(3) { left: 30%; animation-delay: 1s; background: var(--secondary); }
+    .confetti:nth-child(4) { left: 40%; animation-delay: 1.5s; }
+    .confetti:nth-child(5) { left: 50%; animation-delay: 2s; background: var(--primary); }
+    .confetti:nth-child(6) { left: 60%; animation-delay: 2.5s; background: var(--secondary); }
+    .confetti:nth-child(7) { left: 70%; animation-delay: 3s; }
+    .confetti:nth-child(8) { left: 80%; animation-delay: 3.5s; background: var(--primary); }
+    .confetti:nth-child(9) { left: 90%; animation-delay: 4s; background: var(--secondary); }
+
+    .return-btn {
+      background: var(--primary);
+      color: rgb(181, 187, 248);
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .return-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg,
+        transparent,
+        rgba(156, 205, 219, 0.3),
+        transparent);
+      transition: 0.5s;
+    }
+
+    .return-btn:hover::before {
+      left: 100%;
+    }
+
+    /* Professional Footer */
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 1rem;
+      margin-top: auto;
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-content ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .footer-content ul li a {
+      color: rgba(162, 204, 212, 0.521);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-content ul li a:hover {
+      color: var(--accent);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+      }
+      
+      .celebration-card {
+        padding: 2rem;
+        margin: 1rem;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Confetti Animation -->
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">INNOVATEX</div>
+  </nav>
+
+  <!-- Celebration Content -->
+  <main>
+    <section class="thank-you">
+      <div class="celebration-card">
+        <i class="fas fa-check-circle checkmark"></i>
+        <h2 style="color: var(--dark); margin: 2rem 0;">Success!</h2>
+        <p style="color: var(--dark); font-size: 1.2rem; margin-bottom: 2rem;">
+          Your submission has been received successfully.<br>
+          We will be in touch shortly.
+        </p>
+        <a href="index.html" class="return-btn">
+          Return to Home
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 InnovateX. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+/* Project Discovery Section */
+.project-discovery {
+    padding: 4rem 2rem;
+    background: #F0F0F0;
+    text-align: center;
+  }
+  
+  .project-discovery h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #0A2647;
+  }
+  
+  .project-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .project-card {
+    background: #FFFFFF;
+    padding: 2rem;
+    border-radius: 10px;
+    width: calc(33.33% - 2rem);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #0A2647;
+  }
+  
+  .project-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .project-card button {
+    padding: 0.75rem 1.5rem;
+    background: #FFD700;
+    color: #0A2647;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .project-card button:hover {
+    background: #E6B800;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .project-card {
+      width: calc(50% - 1rem);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .project-card {
+      width: 100%;
+    }
+  }

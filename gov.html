@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Ministerial Request</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <form action="https://formspree.io/f/mnnjwdkd" method="POST">
+    <h2>Submit a Request for Ministry</h2>
+    <label for="ministry">Select Ministry:</label>
+    <select id="ministry" name="ministry" required>
+      <option value="">--Choose a Ministry--</option>
+      <option value="Ministry of Foreign Affairs">Ministry of Foreign Affairs</option>
+      <option value="Ministry of Defense">Ministry of Defense</option>
+      <option value="Ministry of Finance">Ministry of Finance</option>
+      <option value="Ministry of Education">Ministry of Education</option>
+      <option value="Ministry of Health">Ministry of Health</option>
+      <option value="Ministry of Interior">Ministry of Interior</option>
+      <option value="Ministry of Justice">Ministry of Justice</option>
+      <option value="Ministry of Culture">Ministry of Culture</option>
+      <option value="Ministry of Energy">Ministry of Energy</option>
+      <option value="Ministry of Industry">Ministry of Industry</option>
+    </select>
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" rows="5" placeholder="Provide details about the needs or competitions..." required></textarea>
+
+    <label for="deadline">Deadline:</label>
+    <input type="date" id="deadline" name="deadline" required>
+
+    <button type="submit">Submit</button>
+    
+  </form>
+</body>
+</html>

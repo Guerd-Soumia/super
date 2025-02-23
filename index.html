@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnovateX - Empowering Innovation Across Industries</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Modern Theme with Updated Color Palette */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #DCD7C9;
+      color: #2C3930;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #2C3930;
+      color: #DCD7C9;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Logo Styling */
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #E9C46A; /* Gold color for a professional look */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #DCD7C9; /* Light beige for the subtitle */
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem; /* Consistent spacing between links */
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: #DCD7C9;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.85rem; /* Smaller font size */
+      transition: all 0.3s ease;
+      padding: 0.5rem; /* Add padding for better clickability */
+    }
+    nav ul li a:hover {
+      color: #A27B5C;
+      transform: translateY(-3px);
+    }
+    .cta-button {
+      background-color: #3F4F44;
+      color: #DCD7C9;
+      padding: 0.4rem 0.8rem; /* Smaller padding */
+      border-radius: 8px; /* Square corners with slight rounding */
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.85rem; /* Smaller font size */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      width: auto; /* Auto width to fit content */
+      display: inline-block; /* Ensure it behaves like a block element */
+      text-align: center; /* Center text */
+    }
+    .cta-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: #2C3930;
+      color: #DCD7C9;
+      padding: 6rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .cta-buttons {
+      margin-top: 2rem;
+    }
+    .btn {
+      padding: 0.75rem 1.5rem;
+      margin: 0.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .btn.primary {
+      background-color: #3F4F44;
+      color: #DCD7C9;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn.primary:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+    .btn.secondary {
+      background-color: #A27B5C;
+      color: #2C3930;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn.secondary:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Welcome Section */
+    .welcome-section {
+      padding: 1rem 2rem;
+      text-align: center;
+      background-color: #DCD7C9;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 400px;
+    }
+    .welcome-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .welcome-section::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%232C3930' fill-opacity='1' d='M0,160L48,149.3C96,139,192,117,288,128C384,139,480,181,576,176C672,171,768,117,864,101.3C960,85,1056,107,1152,128C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E") no-repeat center bottom;
+      background-size: cover;
+    }
+    .welcome-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #2C3930;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .welcome-section p {
+      font-size: 1.2rem;
+      color: #2C3930;
+    }
+
+    /* Features Section */
+    .sections {
+      padding: 4rem 2rem;
+      text-align: center;
+      background-color: #3F4F44;
+    }
+    .sections h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #DCD7C9;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .section-cards {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .section-card {
+      background-color: rgba(255, 255, 255, 0.573);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 30%;
+      min-width: 250px;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .section-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .section-card i {
+      font-size: 2.5rem;
+      color: #2C3930;
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
+    }
+    .section-card:hover i {
+      transform: rotate(360deg);
+    }
+    .section-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #2C3930;
+      transition: all 0.3s ease;
+    }
+    .section-card p {
+      font-size: 1rem;
+      color: #2C3930;
+      opacity: 0;
+      transition: all 0.3s ease;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+    }
+    .section-card:hover p {
+      opacity: 1;
+    }
+    .section-card:hover h3 {
+      opacity: 0;
+    }
+
+    /* Why Choose InnovateX Section */
+    .features {
+      padding: 4rem 2rem;
+      text-align: center;
+      background-color: #DCD7C9;
+    }
+    .features h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #2C3930;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .feature-cards {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      flex: 1;
+      min-width: 250px;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .card i {
+      font-size: 2.5rem;
+      color: #3F4F44;
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
+    }
+    .card:hover i {
+      transform: rotate(360deg);
+    }
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #2C3930;
+      transition: all 0.3s ease;
+    }
+    .card p {
+      font-size: 1rem;
+      color: #2C3930;
+      opacity: 0;
+      transition: all 0.3s ease;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+    }
+    .card:hover p {
+      opacity: 1;
+    }
+    .card:hover h3 {
+      opacity: 0;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2C3930;
+      color: #DCD7C9;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    footer ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    footer ul li a {
+      color: #DCD7C9;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    footer ul li a:hover {
+      color: #A27B5C;
+      transform: translateY(-3px);
+    }
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">
+      INNOVATEX
+    
+    </div>
+    <ul>
+    
+    <div>
+      <a href="signin.html" class="cta-button">Sign Up/Sign In</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Empowering Innovation Across Industries</h1>
+      <p>From job opportunities and investments to education, collaboration, and government partnerships, InnovateX is your gateway to success in a connected world.</p>
+      <div class="cta-buttons">
+        <a href="section1.html" class="btn primary">Find a Job</a>
+        <a href="section2.html" class="btn primary">Find Investors</a>
+        <a href="section3.html" class="btn primary">Invest in Projects</a>
+        <a href="section7.html" class="btn primary">GOV</a>
+        <a href="section4.html" class="btn secondary">Find Companies</a>
+        <a href="section5.html" class="btn secondary">Education Resources</a>
+        <a href="section6.html" class="btn secondary">E-Shop</a>
+        <a href="section8.html" class="btn secondary">Collaboration</a>
+        <a href="section9.html" class="btn secondary">Feedback</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Welcome Section -->
+  <section class="welcome-section">
+    <div class="welcome-content">
+      <h2>Welcome to InnovateX</h2>
+      <p>InnovateX is a platform designed to bridge the gap between talents, investors, and resources. Whether you're looking for a job, seeking investors for your project, or exploring educational resources, InnovateX is here to help you achieve your goals.</p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="sections">
+    <h2>Explore Our Features</h2>
+    <div class="section-cards">
+      <div class="section-card">
+        <i class="fas fa-briefcase"></i>
+        <h3>Find a Job</h3>
+        <p>Discover job opportunities tailored to your skills and experience. Connect with employers and take the next step in your career.</p>
+      </div>
+      <div class="section-card">
+        <i class="fas fa-hand-holding-heart"></i>
+        <h3>Find Investors</h3>
+        <p>Get funding for your projects by connecting with investors who believe in your vision and want to support your growth.</p>
+      </div>
+      <div class="section-card">
+        <i class="fas fa-globe"></i>
+        <h3>Invest in Projects</h3>
+        <p>Explore innovative projects and invest in ideas that have the potential to make a global impact.</p>
+      </div>
+      <div class="section-card">
+        <i class="fas fa-landmark"></i>
+        <h3>GOV</h3>
+        <p>Collaborate with government initiatives and access resources for public-private partnerships.</p>
+      </div>
+      <div class="section-card">
+        <i class="fas fa-building"></i>
+        <h3>Find Companies</h3>
+        <p>Search for companies that align with your values and goals. Connect with businesses that need your expertise.</p>
+      </div>
+      <div class="section-card">
+        <i class="fas fa-book"></i>
+        <h3>Education Resources</h3>
+        <p>Access a wealth of educational materials to enhance your skills and knowledge. Learn from experts in your field.</p>
+      </div>
+      <div class="section-card">
+        <i class="fas fa-shopping-cart"></i>
+        <h3>E-Shop</h3>
+        <p>Explore our e-shop for tools, resources, and products that can help you succeed in your personal and professional life.</p>
+      </div>
+      <div class="section-card">
+        <i class="fas fa-handshake"></i>
+        <h3>Collaboration</h3>
+        <p>Join forces with like-minded individuals and organizations to tackle global challenges.</p>
+      </div>
+      <div class="section-card">
+        <i class="fas fa-comments"></i>
+        <h3>Feedback</h3>
+        <p>Share your experience and help us improve. Your insights drive our mission to empower innovation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose InnovateX Section -->
+  <section class="features">
+    <h2>Why Choose InnovateX?</h2>
+    <div class="feature-cards">
+      <div class="card">
+        <i class="fas fa-users"></i>
+        <h3>Elite Talent Network</h3>
+        <p>Access top professionals for your projects.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Innovative Solutions</h3>
+        <p>Turn ideas into reality with expert guidance.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Global Reach</h3>
+        <p>Connect with investors and businesses worldwide.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <ul>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="term.html">Terms of Service</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <p>&copy; 2025 InnovateX. All rights reserved.</p>
+  </footer>
+</body>
+</html>

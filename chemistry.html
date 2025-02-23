@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnovateX - Chemistry</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="section1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Custom Styles for Chemistry Page */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      background: #f4f7f6; /* Light gray background */
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .category-selection {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .category-cards {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .category-card {
+      background: #ffffff; /* White background for cards */
+      border-radius: 15px;
+      padding: 2rem;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .category-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .category-card i {
+      font-size: 3rem;
+      color: #19703d; /* Green color for icons */
+      margin-bottom: 1rem;
+    }
+
+    .category-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #34495e; /* Dark blue for headings */
+    }
+
+    .category-card p {
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    .course-highlights {
+      margin-top: 1rem;
+    }
+
+    .course-highlights h4 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: #34495e; /* Dark blue for subheadings */
+    }
+
+    .course-highlights ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .course-highlights ul li {
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    /* Footer Styles */
+    footer {
+      background: #2c3e50; /* Dark blue footer */
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-content p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .footer-content ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .footer-content ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.8rem;
+    }
+
+    .footer-content ul li a:hover {
+      color: #3498db; /* Light blue hover effect */
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">InnovateX</div>
+    <ul>
+      
+    </ul>
+    <a href="physics-chemistry.html" class="cta-button">Go Back</a>
+  </nav>
+
+  <!-- Chemistry Section -->
+  <main>
+    <section class="category-selection">
+      <div class="registration-content">
+        <h2>Chemistry Specializations</h2>
+        <div class="category-cards">
+          <!-- Organic Chemistry Card -->
+          <div class="category-card">
+            <a href="organic-chemistry.html" style="text-decoration: none; color: inherit;">
+              <i class="fas fa-leaf"></i>
+              <h3>Organic Chemistry</h3>
+              <p>Study carbon-based compounds and their reactions.</p>
+              <div class="course-highlights">
+                <h4>Key Topics:</h4>
+                <ul>
+                  <li>Chemical Bonding</li>
+                  <li>Organic Synthesis</li>
+                  <li>Reaction Mechanisms</li>
+                </ul>
+              </div>
+            </a>
+          </div>
+
+          <!-- Physical Chemistry Card -->
+          <div class="category-card">
+            <a href="physical-chemistry.html" style="text-decoration: none; color: inherit;">
+              <i class="fas fa-balance-scale"></i>
+              <h3>Physical Chemistry</h3>
+              <p>Analyze energy and dynamics of chemical systems.</p>
+              <div class="course-highlights">
+                <h4>Key Topics:</h4>
+                <ul>
+                  <li>Thermodynamics</li>
+                  <li>Kinetics</li>
+                  <li>Quantum Chemistry</li>
+                </ul>
+              </div>
+            </a>
+          </div>
+
+          <!-- Biochemistry Card -->
+          <div class="category-card">
+            <a href="biochemistry.html" style="text-decoration: none; color: inherit;">
+              <i class="fas fa-dna"></i>
+              <h3>Biochemistry</h3>
+              <p>Explore chemical processes in living organisms.</p>
+              <div class="course-highlights">
+                <h4>Key Topics:</h4>
+                <ul>
+                  <li>Enzymes</li>
+                  <li>Metabolism</li>
+                  <li>Molecular Biology</li>
+                </ul>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 InnovateX. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

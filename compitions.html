@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ministerial Competitions in Algeria</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Theme in shades of olive green, brown, and light yellow */
+    :root {
+      --primary: #4c4b16;   /* Olive Green */
+      --secondary: #6f4f37; /* Brown */
+      --accent: #e6c767;    /* Light Yellow (changed to Brown) */
+      --light: #eef4ef;     /* Light Slate Blue */
+      --dark: #4c4b16;      /* Medium Green */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: radial-gradient(circle at 50% 50%, var(--light) 0%, #ffffff 100%);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    nav {
+      background: linear-gradient(145deg, var(--primary) 0%, var(--secondary) 100%);
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    nav .logo {
+      color: var(--light);
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    nav a {
+      color: var(--light);
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* Main content */
+    main {
+      flex: 1;
+      padding: 3rem 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .category-list {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Title */
+    h2 {
+      color: var(--dark);
+      font-size: 2.8rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--secondary);
+      border-radius: 2px;
+    }
+
+    /* Grid for categories */
+    .category-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 categories per row */
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Center the last two categories in the row */
+    .category-row:last-child {
+      grid-template-columns: repeat(2, 1fr); /* 2 categories centered in the row */
+      justify-items: center; /* Center the items */
+    }
+
+    /* Category Boxes */
+    .category-item {
+      background: var(--light);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      position: relative;
+      height: 250px;  /* Fixed height for square boxes */
+      text-align: center;
+    }
+
+    .category-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    }
+
+    .category-item img {
+      width: 120px;
+      height: 120px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .category-item .content {
+      width: 100%;
+    }
+
+    .category-item .name {
+      font-size: 1.2rem; /* Reduced font size */
+      font-weight: bold;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .category-item .description {
+      font-size: 0.9rem; /* Reduced font size */
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .category-item a {
+      font-size: 0.9rem; /* Reduced font size */
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .category-item a:hover {
+      color: var(--accent);
+    }
+
+    footer {
+      background: var(--primary);
+      color: var(--light);
+      padding: 1rem;
+      margin-top: auto;
+      border-top: 3px solid var(--secondary);
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--light);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">EDUCATION HUB</div>
+    <ul>
+      <li><a href="section5.html">Go Back</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <section class="category-list">
+
+      <!-- First Row: Title -->
+      <h2>Ministerial Competitions Available in Algeria</h2>
+
+      <!-- Second Row: 4 Categories -->
+      <div class="category-row">
+        <!-- Ministry of Foreign Affairs -->
+        <div class="category-item">
+          <img src="Ministry of Foreign Affairs.png" alt="Ministry of Foreign Affairs Image">
+          <div class="content">
+            <div class="name">
+              <a href="ministry_foreign_affairs.html">Ministry of Foreign Affairs</a>
+            </div>
+            <div class="description">
+              Participate in various competitions related to foreign diplomacy and international relations.
+            </div>
+            <a href="ministry_foreign_affairs.html">Learn more</a>
+          </div>
+        </div>
+
+        <!-- Ministry of Defense -->
+        <div class="category-item">
+          <img src="Ministry of Defense.jfif" alt="Ministry of Defense Image">
+          <div class="content">
+            <div class="name">
+              <a href="ministry_defense.html">Ministry of Defense</a>
+            </div>
+            <div class="description">
+              Explore defense-related job opportunities and recruitment exams.
+            </div>
+            <a href="ministry_defense.html">Learn more</a>
+          </div>
+        </div>
+
+        <!-- Ministry of the Interior -->
+        <div class="category-item">
+          <img src="Ministry of the Interior, Local Authorities, and National Planning.jfif" alt="Ministry of Interior Image">
+          <div class="content">
+            <div class="name">
+              <a href="ministry_interior.html">Ministry of the Interior</a>
+            </div>
+            <div class="description">
+              Find out about local government and national planning job opportunities and exams.
+            </div>
+            <a href="ministry_interior.html">Learn more</a>
+          </div>
+        </div>
+
+        <!-- Ministry of Finance -->
+        <div class="category-item">
+          <img src="Ministry of Finance.png" alt="Ministry of Finance Image">
+          <div class="content">
+            <div class="name">
+              <a href="ministry_finance.html">Ministry of Finance</a>
+            </div>
+            <div class="description">
+              Get updated on finance-related competitive exams and career opportunities.
+            </div>
+            <a href="ministry_finance.html">Learn more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Third Row: More Categories -->
+      <div class="category-row">
+        <!-- Ministry of Justice -->
+        <div class="category-item">
+          <img src="Ministry of Justice.png" alt="Ministry of Justice Image">
+          <div class="content">
+            <div class="name">
+              <a href="ministry_justice.html">Ministry of Justice</a>
+            </div>
+            <div class="description">
+              Explore legal career competitions and judicial exams.
+            </div>
+            <a href="ministry_justice.html">Learn more</a>
+          </div>
+        </div>
+
+        <!-- Ministry of Education -->
+        <div class="category-item">
+          <img src="Ministry of Education.png" alt="Ministry of Education Image">
+          <div class="content">
+            <div class="name">
+              <a href="ministry_education.html">Ministry of Education</a>
+            </div>
+            <div class="description">
+              Find teaching job competitions and career development opportunities.
+            </div>
+            <a href="ministry_education.html">Learn more</a>
+          </div>
+        </div>
+
+        <!-- Ministry of Health -->
+        <div class="category-item">
+          <img src="Ministry of Health, Population, and Hospital Reform.png" alt="Ministry of Health Image">
+          <div class="content">
+            <div class="name">
+              <a href="ministry_health.html">Ministry of Health</a>
+            </div>
+            <div class="description">
+              Discover healthcare-related competitions and recruitment in the health sector.
+            </div>
+            <a href="ministry_health.html">Learn more</a>
+          </div>
+        </div>
+
+        <!-- Ministry of Culture -->
+        <div class="category-item">
+          <img src="Ministry of Culture and Arts.jfif" alt="Ministry of Culture Image">
+          <div class="content">
+            <div class="name">
+              <a href="ministry_culture.html">Ministry of Culture</a>
+            </div>
+            <div class="description">
+              Explore career opportunities and competitions in the arts and culture field.
+            </div>
+            <a href="ministry_culture.html">Learn more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fourth Row: 2 Centered Categories -->
+      <div class="category-row">
+        <!-- Ministry of Energy -->
+        <div class="category-item">
+          <img src="Ministry of Energy.png" alt="Ministry of Energy Image">
+          <div class="content">
+            <div class="name">
+              <a href="ministry_energy.html">Ministry of Energy</a>
+            </div>
+            <div class="description">
+              Check out competitive exams and job opportunities in the energy sector.
+            </div>
+            <a href="ministry_energy.html">Learn more</a>
+          </div>
+        </div>
+
+        <!-- Ministry of Labor -->
+        <div class="category-item">
+          <img src="Ministry of Industry.png" alt="Ministry of Industry Image">
+          <div class="content">
+            <div class="name">
+              <a href="ministry_labor.html">Ministry of Industry</a>
+            </div>
+            <div class="description">
+              Learn about labor-related job opportunities and competitive exams.
+            </div>
+            <a href="ministry_labor.html">Learn more</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Education Hub. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

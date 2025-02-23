@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnovateX - Project Hub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #2c393050;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background:#2C3930;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .back-button {
+      background: #7e9585;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background: #7e9585;
+    }
+
+    .category-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 50px 20px;
+      align-items: center;
+    }
+
+    .category-box {
+      width: 300px;
+      height: 200px;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .category-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .category-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .ready-projects {
+      color: #27ae60;
+    }
+
+    .needs {
+      color: #f39c12;
+    }
+
+    h2 {
+      margin: 10px 0;
+      color:#2C3930;
+    }
+
+    p {
+      color: #7f8c8d;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    footer {
+      background: #2C3930;
+      color: white;
+      padding: 1.5rem 2rem;
+      margin-top: auto;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-content ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-content ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .category-container {
+        flex-direction: column;
+      }
+      
+      .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+
+    /* Sticky Note Styles */
+    .sticky-note {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ffc107; /* Yellow background */
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+      display: none; /* Initially hidden */
+      z-index: 1000; /* Ensure it appears above other elements */
+    }
+
+    .sticky-note h3 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .sticky-note ol {
+      padding-left: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .sticky-note ol li {
+      margin-bottom: 10px;
+    }
+
+    .sticky-note ol li strong {
+      color: #000;
+    }
+
+    /* Lamp Icon Styles */
+    #lamp-icon {
+      color: #ffc107; /* Yellow color for the lamp */
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    #lamp-icon:hover {
+      color: #e0a800; /* Darker yellow on hover */
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">InnovateX</div>
+      <a href="index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i> Back to Home
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content - Now with proper links -->
+  <div class="category-container">
+    <a href="ready.html" class="category-box ready-projects">
+      <i class="fas fa-check-circle category-icon"></i>
+      <h2>Ready Projects</h2>
+      <p>Complete projects seeking immediate investment</p>
+    </a>
+
+    <a href="need1.html" class="category-box needs">
+      <i class="fas fa-tools category-icon"></i>
+      <h2>Project Needs</h2>
+      <p>Projects requiring support for completion</p>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 InnovateX. All rights reserved.</p>
+      <ul>
+        <li><a href="#" id="lamp-icon"><i class="fas fa-lightbulb"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Sticky Note -->
+  <div id="sticky-note" class="sticky-note">
+    <h3>How It Works</h3>
+    <ol>
+      <li>If you have a <strong>ready-made project</strong> and only need an investor, choose <strong>Ready Projects</strong>.</li>
+      <li>If you have a <strong>non-complete project</strong> and need our help to solve your problem, choose <strong>Project Needs</strong>.</li>
+      <li>For <strong>Ready Projects</strong>, we take <strong>5%</strong> of the project value if we find an investor.</li>
+      <li>For <strong>Project Needs</strong>, we take <strong>10%</strong> of the project value for our assistance.</li>
+    </ol>
+  </div>
+
+  <script>
+    // Debugging: Check if the script is running
+    console.log("Script loaded!");
+
+    // Show the sticky note when the page loads
+    window.onload = function () {
+      const stickyNote = document.getElementById("sticky-note");
+      if (stickyNote) {
+        console.log("Sticky note found!");
+        stickyNote.style.display = "block";
+
+        // Hide the sticky note after 5 seconds
+        setTimeout(() => {
+          stickyNote.style.display = "none";
+        }, 5000); // 5000 milliseconds = 5 seconds
+      } else {
+        console.error("Sticky note not found!");
+      }
+    };
+
+    // Show the sticky note when the lamp icon is clicked
+    const lampIcon = document.getElementById("lamp-icon");
+    if (lampIcon) {
+      lampIcon.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent the link from navigating
+        const stickyNote = document.getElementById("sticky-note");
+        if (stickyNote) {
+          console.log("Lamp icon clicked! Showing sticky note.");
+          stickyNote.style.display = "block";
+
+          // Hide the sticky note after 5 seconds
+          setTimeout(() => {
+            stickyNote.style.display = "none";
+          }, 5000); // 5000 milliseconds = 5 seconds
+        } else {
+          console.error("Sticky note not found!");
+        }
+      });
+    } else {
+      console.error("Lamp icon not found!");
+    }
+  </script>
+</body>
+</html>

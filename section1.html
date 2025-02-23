@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnovateX - Category Grid</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --dark-green: #254336;
+      --medium-green: #6B8A7A;
+      --light-beige: #B7B597;
+      --light-gray: #DAD3BE;
+      --yellow: #ffc107;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--light-gray);
+      color: var(--dark-green);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      background-color: var(--dark-green);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--light-gray);
+    }
+
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav .cta-button {
+      background-color: var(--yellow);
+      color: var(--dark-green);
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: var(--dark-green);
+      color: var(--light-gray);
+      padding: 20px;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 2rem auto;
+    }
+
+    .category-card {
+      background: var(--light-beige);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s, background 0.3s;
+      cursor: pointer;
+    }
+
+    .category-card:hover {
+      transform: translateY(-10px);
+      background: var(--medium-green);
+      color: var(--light-gray);
+    }
+
+    .category-card i {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--dark-green);
+    }
+
+    .category-card:hover i {
+      color: var(--light-gray);
+    }
+
+    .category-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .category-card p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .category-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">InnovateX</div>
+    <a href="index.html" class="cta-button">Go Back</a>
+  </nav>
+
+  <div class="category-grid">
+    <a href="software-development.html" class="category-card"><i class="fas fa-code"></i><h3>Software Development</h3><p>Create innovative solutions through programming and system design.</p></a>
+    <a href="culinary-arts.html" class="category-card"><i class="fas fa-utensils"></i><h3>Culinary Arts</h3><p>Master cooking techniques and food innovation strategies.</p></a>
+    <a href="healthcare.html" class="category-card"><i class="fas fa-heartbeat"></i><h3>Healthcare Innovation</h3><p>Pioneer new medical technologies and treatment methods.</p></a>
+    <a href="physics-chemistry.html" class="category-card"><i class="fas fa-atom"></i><h3>Science Research</h3><p>Explore the fundamental laws of nature and matter.</p></a>
+    <a href="finance.html" class="category-card"><i class="fas fa-coins"></i><h3>Financial Management</h3><p>Optimize investments and economic strategies.</p></a>
+    <a href="legal.html" class="category-card"><i class="fas fa-balance-scale"></i><h3>Legal Services</h3><p>Navigate legal frameworks and property regulations.</p></a>
+    <a href="hr.html" class="category-card"><i class="fas fa-users-cog"></i><h3>Human Resources</h3><p>Develop effective workforce management strategies.</p></a>
+    <a href="languages.html" class="category-card"><i class="fas fa-language"></i><h3>Language Studies</h3><p>Master communication in multiple cultural contexts.</p></a>
+    <a href="travel.html" class="category-card"><i class="fas fa-plane"></i><h3>Travel & Tourism</h3><p>Explore global destinations and cultural experiences.</p></a>
+    <a href="hotel2.html" class="category-card"><i class="fas fa-hotel"></i><h3>Hospitality Management</h3><p>Deliver exceptional guest experiences and optimize hotel operations.</p></a>
+    <a href="architectural-design.html" class="category-card"><i class="fas fa-building"></i><h3>Architectural Design</h3><p>Innovate in building design and sustainable urban development.</p></a>
+    <a href="facility-services.html" class="category-card"><i class="fas fa-broom"></i><h3>Facility Services</h3><p>Ensure clean, safe, and efficient environments for businesses and institutions.</p></a>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 InnovateX. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ministry of Defense - Competitions</title>
+  <style>
+    :root {
+      --primary: #222d01;    /* Dark Olive Green */
+      --secondary: #abba7c;  /* Light Olive Green */
+      --accent: #ffe31a;     /* Bright Yellow */
+      --background: #3d530070; /* Deep Red */
+      --text: #0b1312;       /* Grayish Blue */
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: var(--background);
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background-color: var(--primary);
+      color: var(--accent);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    header {
+      text-align: center;
+      margin-top: 3rem;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      color: var(--primary);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: var(--secondary);
+      margin-top: 1rem;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .concours-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .concours-box {
+      background-color: var(--secondary);
+      border-radius: 8px;
+      padding: 2rem;
+      width: 80%;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .concours-box h3 {
+      color: var(--primary);
+      font-size: 1.6rem;
+    }
+
+    .concours-box p {
+      font-size: 1.2rem;
+      color: var(--text);
+    }
+
+    .concours-box a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1rem;
+      display: inline-block;
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: var(--accent);
+      padding: 1rem;
+      text-align: center;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div>Ministry of Defense</div>
+    <a href="compitions.html">Back to Main</a>
+  </nav>
+
+  <!-- Page Header -->
+  <header>
+    <h1>Ministry of Defense</h1>
+    <p>Explore the latest concours for the Ministry of Defense in Algeria.</p>
+  </header>
+
+  <!-- Competitions Section -->
+  <section>
+    <h2>Available Competitions</h2>
+
+    <div class="concours-container">
+      <!-- Competition 1 -->
+      <div class="concours-box">
+        <h3>Military Officer Exam</h3>
+        <p><strong>Application Deadline:</strong> May 15, 2025</p>
+        <p><strong>Description:</strong> A concours for aspiring military officers with written and physical exams.</p>
+        <a href="inscription.html">Apply Now</a>
+      </div>
+
+      <!-- Competition 2 -->
+      <div class="concours-box">
+        <h3>Military Engineering Specialist</h3>
+        <p><strong>Application Deadline:</strong> June 10, 2025</p>
+        <p><strong>Description:</strong> A concours for specialists in military engineering, including infrastructure and strategic planning.</p>
+        <a href="inscription.html">Apply Now</a>
+      </div>
+
+      <!-- Competition 3 -->
+      <div class="concours-box">
+        <h3>Cybersecurity Officer</h3>
+        <p><strong>Application Deadline:</strong> June 30, 2025</p>
+        <p><strong>Description:</strong> A concours for cybersecurity officers to defend Algeria's military systems from cyber threats.</p>
+        <a href="inscription.html">Apply Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ministry of Defense Competitions</p>
+  </footer>
+
+</body>
+</html>

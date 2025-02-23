@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collaborate With Us - CuiArt</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Updated Color Palette */
+    :root {
+      --primary: #2C3930; /* Dark Green */
+      --secondary: #3F4F44; /* Deep Sage */
+      --accent: #A27B5C; /* Warm Brown */
+      --light: #DCD7C9; /* Light Sand */
+      --dark: #212121; /* Dark Gray */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: radial-gradient(circle at 50% 50%, var(--light) 0%, #E0E0E0 100%);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav {
+      background: linear-gradient(145deg, var(--primary) 0%, var(--secondary) 100%);
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .logo {
+      color: var(--light);
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* Form Section */
+    .form-container {
+      background: var(--light);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 100%;
+      margin: 2rem auto;
+    }
+
+    .form-container h2 {
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid var(--secondary);
+      border-radius: 5px;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      background: var(--accent);
+      color: var(--light);
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: var(--secondary);
+    }
+
+    footer {
+      background: var(--primary);
+      color: var(--accent);
+      padding: 0.5rem;
+      width: 100%;
+      text-align: center;
+      font-size: 0.8rem;
+      margin-top: auto;
+      position: relative;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">InnovateX</div>
+    <ul>
+      <li><a href="section8.html">Home</a></li>
+   
+    </ul>
+  </nav>
+
+  <div class="form-container">
+    <h2>Collaborate With Us</h2>
+    <form action="https://formspree.io/f/xqaejkzl" method="POST">
+      <!-- Full Name -->
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+      </div>
+
+      <!-- Phone Number -->
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+      </div>
+
+      <!-- Domain Selection -->
+      <div class="form-group">
+        <label for="domain">Select Domain</label>
+        <select id="domain" name="domain" required>
+          <option value="">Choose a Domain</option>
+          <option value="technology">Technology</option>
+          <option value="healthcare">Healthcare</option>
+          <option value="energy">Energy</option>
+          <option value="finance">Finance</option>
+          <option value="education">Education</option>
+        </select>
+      </div>
+
+      <!-- Message -->
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" placeholder="Tell us about your collaboration idea" required></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 CuiArt. All rights reserved.</p>
+  </footer>
+</body>
+</html>

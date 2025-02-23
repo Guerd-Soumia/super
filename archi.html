@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architecture Projects - InnovateX</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Modern Artistic Theme with Olive and Cream */
+    :root {
+      --primary: #212e08;       /* Olive */
+      --secondary: #8b4513;     /* Saddle Brown */
+      --accent: #d2b48c;        /* Tan (Cream-like) */
+      --dark: #2f4f4f;          /* Dark Slate Gray */
+      --light: #f5f5dc;         /* Beige (Cream) */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: radial-gradient(circle at 50% 50%, var(--light) 0%, #e6e6d1 100%);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navigation */
+    nav {
+      background: linear-gradient(145deg, var(--primary) 0%, #556b2f 100%);
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      color: var(--accent);
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    .back-button {
+      background: var(--secondary);
+      color: var(--light);
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background: #5d3410;
+    }
+
+    /* Project Cards */
+    .project-selection {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .project-card {
+      background: var(--light);
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card h3 {
+      color: var(--dark);
+      margin-bottom: 1rem;
+    }
+
+    .project-card p {
+      color: #6c757d;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .project-card a {
+      background: var(--primary);
+      color: var(--light);
+      padding: 0.7rem 1.2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .project-card a:hover {
+      background: #293712;
+      transform: translateY(-3px);
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">INNOVATEX</div>
+    <a href="privat.html" class="back-button">Go Back</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <section class="project-selection">
+      <div class="project-card">
+        <h3>Modern Healthcare Facilities</h3>
+        <p>Designing cutting-edge hospitals and clinics that prioritize patient care, sustainability, and advanced medical technologies.</p>
+        <a href="input2.html?project=Modern%20Healthcare%20Facilities">Invest Now</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Innovative Educational Campuses</h3>
+        <p>Creating dynamic learning environments that foster collaboration, creativity, and academic excellence.</p>
+        <a href="input2.html?project=Innovative%20Educational%20Campuses">Invest Now</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Luxury Eco-Resorts</h3>
+        <p>Developing sustainable luxury resorts that harmonize with nature while offering world-class hospitality.</p>
+        <a href="input2.html?project=Luxury%20Eco-Resorts">Invest Now</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Urban Transport Hubs</h3>
+        <p>Engineering state-of-the-art transport hubs that enhance urban connectivity, efficiency, and sustainability.</p>
+        <a href="input2.html?project=Urban%20Transport%20Hubs">Invest Now</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Sustainable Residential Towers</h3>
+        <p>Creating high-rise residential buildings that integrate biophilic design, smart technologies, and eco-friendly materials.</p>
+        <a href="input2.html?project=Sustainable%20Residential%20Towers">Invest Now</a>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

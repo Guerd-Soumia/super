@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnovateX - For Institutions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* New Color Palette */
+    :root {
+      --primary: #2C3930;       /* Dark Green */
+      --secondary: #3F4F44;     /* Medium Green */
+      --accent: #A27B5C;        /* Brown */
+      --light: #DCD7C9;         /* Light Beige */
+      --dark: #212121;          /* Dark Gray (for text) */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--light); /* Light Beige background */
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Navigation */
+    nav {
+      background: linear-gradient(145deg, var(--primary) 0%, #1E2A22 100%);
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    nav::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      left: -30px;
+      width: 100px;
+      height: 100px;
+      background: rgba(255,255,255,0.1);
+      transform: rotate(45deg);
+    }
+
+    .logo {
+      color: var(--accent); /* Brown logo text */
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    nav a {
+      color: var(--light); /* Light Beige text */
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent); /* Brown underline */
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .cta-button {
+      background: var(--accent); /* Brown button */
+      color: var(--light); /* Light Beige text */
+      padding: 0.7rem 1.8rem;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(162, 123, 92, 0.3);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(162, 123, 92, 0.4);
+    }
+
+    /* Category Cards */
+    .category-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Three categories per row */
+      gap: 1.5rem;
+      padding: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .category-card {
+      background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+      border-radius: 15px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 300px;
+      width: 100%;
+    }
+
+    .category-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent 20%, rgba(44,57,48,0.1) 100%);
+      transform: rotate(45deg);
+      transition: all 0.6s ease;
+    }
+
+    .category-card:hover {
+      transform: translateY(-8px) rotate(1deg);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+
+    .category-card:hover::before {
+      top: -20%;
+      left: -20%;
+    }
+
+    .category-card img {
+      width: 60%;
+      height: auto;
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .category-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .category-card h3 {
+      color: var(--dark); /* Dark Gray text */
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+      position: relative;
+    }
+
+    .category-card h3::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: var(--secondary); /* Medium Green underline */
+      transition: width 0.3s ease;
+    }
+
+    .category-card:hover h3::after {
+      width: 60%;
+    }
+
+    .category-card p {
+      color: #6c757d;
+      line-height: 1.5;
+      font-size: 0.9rem;
+      padding: 0 0.5rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary); /* Dark Green footer */
+      color: var(--light); /* Light Beige text */
+      padding: 1rem;
+      margin-top: auto;
+      border-top: 2px solid var(--secondary); /* Medium Green border */
+      width: 100%;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    footer ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      padding: 0;
+    }
+
+    footer a {
+      color: var(--light); /* Light Beige text */
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: var(--accent); /* Brown hover */
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+      }
+
+      .category-card {
+        min-height: 220px;
+        padding: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .category-card {
+        max-width: 100%;
+      }
+
+      footer {
+        padding: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">InnovateX</div>
+    <ul>
+      <a href="section4.html" class="cta-button">Go Back</a>
+    </ul>
+  </nav>
+
+  <!-- Category Cards with URLs -->
+  <div class="category-cards">
+    <div class="category-card">
+      <a href="https://smartsolution-innov.dz/" target="_blank">
+        <img src="smart solutions dz.png" alt="Smart Solutions">
+        <h3>Smart Solutions</h3>
+        <p>Innovative digital solutions and technology services.</p>
+      </a>
+    </div>
+
+    <div class="category-card">
+      <a href="https://dev-mind.fr/" target="_blank">
+        <img src="devmind.png" alt="Dev Mind">
+        <h3>Dev Mind</h3>
+        <p>Creative software development and IT consulting.</p>
+      </a>
+    </div>
+
+    <div class="category-card">
+      <a href="https://algerietelecom.dz/en/" target="_blank">
+        <img src="Algérie telecom.png" alt="Telecom Solutions">
+        <h3>Telecom Solutions</h3>
+        <p>National telecommunications infrastructure services.</p>
+      </a>
+    </div>
+
+    <div class="category-card">
+      <a href="https://softtech-airsoft.com/fr/" target="_blank">
+        <img src="softtech.jfif" alt="SoftTech Gaming">
+        <h3>SoftTech Gaming</h3>
+        <p>Innovative gaming technology solutions.</p>
+      </a>
+    </div>
+
+    <div class="category-card">
+      <a href="https://www.nextek.org/" target="_blank">
+        <img src="NEXTEK.jpg" alt="NexTek">
+        <h3>NexTek</h3>
+        <p>Advanced technology solutions and R&D.</p>
+      </a>
+    </div>
+
+    <div class="category-card">
+      <a href="https://codecrafters.io/" target="_blank">
+        <img src="codecraftersio.jfif" alt="Code Crafters">
+        <h3>Code Crafters</h3>
+        <p>Custom software development services.</p>
+      </a>
+    </div>
+
+    <div class="category-card">
+      <a href="https://www.technovaworld.com/" target="_blank">
+        <img src="technova.png" alt="Technova World">
+        <h3>Technova World</h3>
+        <p>Cutting-edge technology innovations.</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 InnovateX. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

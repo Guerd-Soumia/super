@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buy Product - InnovateX</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Basic Reset */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #173d3dc5;
+      padding: 1rem;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    /* Form Container */
+    .form-container {
+      max-width: 500px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .form-container label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    .form-container input,
+    .form-container textarea,
+    .form-container select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .form-container button {
+      display: block;
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #173d3dc5;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-container button:hover {
+      background-color: #173d3dc5;
+    }
+
+    /* Footer */
+    footer {
+      background-color:#173d3dc5;
+      padding: 1rem;
+      text-align: center;
+      color: #fff;
+      margin-top: 2rem;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Buy Product</h1>
+  </header>
+
+  <!-- Form Container -->
+  <div class="form-container">
+    <h2>Enter Your Information</h2>
+    <form id="orderForm" action="https://formspree.io/f/mwpvrylo" method="POST">
+      <!-- Customer Input for Product Name -->
+      <label for="product">Product Name</label>
+      <input type="text" id="product" name="product" required>
+
+      <!-- Customer Input for Price -->
+      <label for="price">Price</label>
+      <input type="number" id="price" name="price" step="0.01" required>
+
+      <!-- Customer Information -->
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="address">Shipping Address</label>
+      <textarea id="address" name="address" rows="4" required></textarea>
+
+      <label for="delivery">Delivery Option</label>
+      <select id="delivery" name="delivery" required>
+        <option value="domicile">Domicile</option>
+        <option value="bureau">Bureau</option>
+      </select>
+
+      <!-- Submit Button -->
+      <button type="submit">Buy Now</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 InnovateX. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Handle form submission
+    document.getElementById('orderForm').addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+
+      // Submit the form to Formspree
+      fetch(this.action, {
+        method: this.method,
+        body: new FormData(this),
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          // Redirect to thanks.html after successful submission
+          window.location.href = 'thanks.html';
+        } else {
+          alert('There was an error submitting your order. Please try again.');
+        }
+      })
+      .catch(error => {
+        alert('There was an error submitting your order. Please try again.');
+      });
+    });
+  </script>
+</body>
+</html>

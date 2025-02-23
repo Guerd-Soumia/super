@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovateX - Submit Your Need</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Updated Color Palette */
+        :root {
+            --primary: #1E201E;  /* Dark Grey */
+            --secondary: #4c4d4982; /* Muted Green-Grey */
+            --accent: #1E201E;   /* Soft Green */
+            --light: #ECDFCC;    /* Light Beige */
+            --text-light: #1E201E; /* Light text color for contrast */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--light);
+            font-family: 'Segoe UI', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            color: var(--light);
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Go Back Button Styles */
+        .go-back-button {
+            background-color: var(--light); /* Box color: #ECDFCC */
+            color: var(--primary); /* Text color: #1E201E */
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .go-back-button:hover {
+            background-color: var(--accent); /* Hover background: #1E201E */
+            color: var(--light); /* Hover text color: #ECDFCC */
+        }
+
+        /* Form Section Styles */
+        .form-section {
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .form-section h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+            text-align: center;
+        }
+
+        .form-container {
+            background: var(--secondary);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 1rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--primary);
+            border-radius: 5px;
+            font-size: 1rem;
+            color: var(--primary);
+            background: var(--light);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .submit-button {
+            background-color: var(--primary);
+            color: var(--light);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 10px 0;
+            font-size: 14px;
+            flex-shrink: 0;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">InnovateX</a>
+            <nav class="nav-links">
+                <a href="need1.html" class="go-back-button">Go Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="form-section">
+        <h2>Submit Your Project Need</h2>
+        <div class="form-container">
+            <form action="https://formspree.io/f/mwpvyjqv" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Your Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="project-name">Project Name</label>
+                    <input type="text" id="project-name" name="project-name" placeholder="Enter your project name" required>
+                </div>
+                <div class="form-group">
+                    <label for="project-description">Project Description</label>
+                    <textarea id="project-description" name="project-description" placeholder="Describe your project" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="problem">What Problem Do You Want to Solve?</label>
+                    <textarea id="problem" name="problem" placeholder="Explain the problem you want us to solve" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="submit-button">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 InnovateX. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

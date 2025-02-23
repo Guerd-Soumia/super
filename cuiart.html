@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algerian Culinary Arts Companies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #DCD7C9; /* Light beige background */
+            color: #2C3930; /* Dark green text */
+        }
+
+        header {
+            background-color: #3F4F44; /* Dark green header */
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #A27B5C; /* Brown logo text */
+        }
+
+        .back-btn {
+            background: none;
+            border: none;
+            color: #DCD7C9; /* Light beige text */
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #2C3930; /* Dark green hover */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 100px auto 30px;
+            padding: 0 15px;
+        }
+
+        h1 {
+            color: #3F4F44; /* Dark green text */
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+
+        .category {
+            margin-bottom: 40px;
+        }
+
+        .category h2 {
+            color: #3F4F44; /* Dark green text */
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #A27B5C; /* Brown underline */
+            padding-bottom: 10px;
+        }
+
+        .company-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
+            gap: 20px;
+        }
+
+        .company-item {
+            background-color: #FFFFFF; /* White background for cards */
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #E0E0E0; /* Subtle border */
+        }
+
+        .company-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .company-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .company-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .company-content h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
+            color: #3F4F44; /* Dark green text */
+            font-weight: 600;
+        }
+
+        .company-content p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #2C3930; /* Dark green text */
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        .company-content a {
+            color: #A27B5C; /* Brown link color */
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 16px;
+            border: 2px solid #A27B5C;
+            border-radius: 25px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .company-content a:hover {
+            background-color: #A27B5C; /* Brown background */
+            color: #FFFFFF; /* White text */
+        }
+
+        @media (max-width: 992px) {
+            .company-list {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .company-list {
+                grid-template-columns: 1fr; /* 1 column on mobile */
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .category h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">InnovateX</div>
+        <button class="back-btn" onclick="window.history.back()">← Back</button>
+    </header>
+
+    <div class="container">
+        <h1>Algerian Culinary Arts Companies</h1>
+        
+        <!-- Education & Training -->
+        <div class="category">
+            <h2>Education & Training</h2>
+            <ul class="company-list">
+                <li class="company-item">
+                    <img src="Institut National de la Formation Professionnelle (INFP).jfif" alt="INFP Campus" class="company-image">
+                    <div class="company-content">
+                        <h3>Institut National de la Formation Professionnelle (INFP)</h3>
+                        <p>📍 Multiple locations across Algeria</p>
+                        <a href="https://goo.gl/maps/7I2U9yL4XJvZkYtJ7" target="_blank">View on Map</a>
+                    </div>
+                </li>
+
+                <li class="company-item">
+                    <img src="ESHRA.png" alt="ESHRA Building" class="company-image">
+                    <div class="company-content">
+                        <h3>ESHRA</h3>
+                        <p>📍 16 Rue des Frères Ouali, Algiers</p>
+                        <a href="https://goo.gl/maps/9jH8vXqLZ9k4hY3M8" target="_blank">View on Map</a>
+                    </div>
+                </li>
+
+                <li class="company-item">
+                    <img src="Atelier Cuisine et Vous.png" alt="Cooking class" class="company-image">
+                    <div class="company-content">
+                        <h3>Atelier Cuisine et Vous</h3>
+                        <p>📍 Rue Didouche Mourad, Algiers</p>
+                        <a href="https://goo.gl/maps/4kqPzVtM7K9j7XHq9" target="_blank">View on Map</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Catering Services -->
+        <div class="category">
+            <h2>Catering Services</h2>
+            <ul class="company-list">
+                <li class="company-item">
+                    <img src="traiteur.png" alt="Catering setup" class="company-image">
+                    <div class="company-content">
+                        <h3>Traiteur d'Alger</h3>
+                        <p>📍 Hydra, Algiers</p>
+                        <a href="https://goo.gl/maps/5sHqFhUJ7Wq9jXHZ9" target="_blank">View on Map</a>
+                    </div>
+                </li>
+
+                <li class="company-item">
+                    <img src="gourmandise.jfif" alt="Catering event" class="company-image">
+                    <div class="company-content">
+                        <h3>Gourmandise Catering</h3>
+                        <p>📍 Oran City Center</p>
+                        <a href="https://goo.gl/maps/2sKj7vM9Zk4hY3M8" target="_blank">View on Map</a>
+                    </div>
+                </li>
+
+                <li class="company-item">
+                    <img src="Le Palais des Délices.png" alt="Algerian pastries" class="company-image">
+                    <div class="company-content">
+                        <h3>Le Palais des Délices</h3>
+                        <p>📍 Bab El Oued, Algiers</p>
+                        <a href="https://goo.gl/maps/3mNp8qR4XJvZkYtJ7" target="_blank">View on Map</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Food Production -->
+        <div class="category">
+            <h2>Food Production</h2>
+            <ul class="company-list">
+                <li class="company-item">
+                    <img src="Cevital Group.jfif" alt="Cevital factory" class="company-image">
+                    <div class="company-content">
+                        <h3>Cevital Group</h3>
+                        <p>📍 Industrial Zone, Béjaïa</p>
+                        <a href="https://goo.gl/maps/9jH8vXqLZ9k4hY3M8" target="_blank">View on Map</a>
+                    </div>
+                </li>
+
+                <li class="company-item">
+                    <img src="Tizi Ouzou.png" alt="Traditional products" class="company-image">
+                    <div class="company-content">
+                        <h3>Terroir Producteurs</h3>
+                        <p>📍 Tizi Ouzou</p>
+                        <a href="https://goo.gl/maps/7I2U9yL4XJvZkYtJ7" target="_blank">View on Map</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Restaurants & Events -->
+        <div class="category">
+            <h2>Restaurants & Events</h2>
+            <ul class="company-list">
+                <li class="company-item">
+                    <img src="Le Grand Bleu.png" alt="Restaurant interior" class="company-image">
+                    <div class="company-content">
+                        <h3>Le Grand Bleu</h3>
+                        <p>📍 Club des Pins, Algiers</p>
+                        <a href="https://goo.gl/maps/4kqPzVtM7K9j7XHq9" target="_blank">View on Map</a>
+                    </div>
+                </li>
+
+                <li class="company-item">
+                    <img src="Es Senia, Oran.jfif" alt="Italian cuisine" class="company-image">
+                    <div class="company-content">
+                        <h3>La Trattoria</h3>
+                        <p>📍 Es Senia, Oran</p>
+                        <a href="https://goo.gl/maps/5sHqFhUJ7Wq9jXHZ9" target="_blank">View on Map</a>
+                    </div>
+                </li>
+
+                <li class="company-item">
+                    <img src="chef rabah.jfif" alt="Chef Rabah Ourrad" class="company-image">
+                    <div class="company-content">
+                        <h3>Rabah Ourrad</h3>
+                        <p>📍 Chef Collaborations (Various locations)</p>
+                        <a href="https://goo.gl/maps/2sKj7vM9Zk4hY3M8" target="_blank">View on Map</a>
+                    </div>
+                </li>
+
+                <li class="company-item">
+                    <img src="Annual Event, Algiers.jfif" alt="Food festival" class="company-image">
+                    <div class="company-content">
+                        <h3>Algiers Food Festival</h3>
+                        <p>📍 Annual Event, Algiers</p>
+                        <a href="https://goo.gl/maps/3mNp8qR4XJvZkYtJ7" target="_blank">View on Map</a>
+                    </div>
+                </li>
+
+                <li class="company-item">
+                    <img src="SAFEX Expo Center, Algiers.png" alt="Food exhibition" class="company-image">
+                    <div class="company-content">
+                        <h3>SIAL Algeria</h3>
+                        <p>📍 SAFEX Expo Center, Algiers</p>
+                        <a href="https://goo.gl/maps/9jH8vXqLZ9k4hY3M8" target="_blank">View on Map</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <p style="text-align: center; color: #3F4F44; margin-top: 25px; font-size: 0.9rem;">
+            * Replace placeholder image URLs with actual company photos<br>
+            ** Map links contain approximate locations
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnovateX - Submit Project</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="project-submission.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">InnovateX</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="section1.html">For Individuals</a></li>
+      <li><a href="section2.html">For Businesses</a></li>
+      <li><a href="section3.html">For Investors</a></li>
+      <li><a href="section4.html">For Institutions</a></li>
+      <li><a href="section5.html">Education</a></li>
+      <li><a href="section6.html">Shop </a> </li>
+    </ul>
+    <a href="#" class="cta-button">Get Started</a>
+  </nav>
+
+  <!-- Project Submission Section -->
+  <section class="project-submission">
+    <div class="registration-content">
+      <h2>Submit Your Project</h2>
+      <form 
+        id="project-submission-form" 
+        action="https://formspree.io/f/https://formspree.io/f/mzzpynky"
+        method="POST"
+      >
+        <input type="hidden" name="_subject" value="New Project Submission">
+        <input type="hidden" name="_next" value="https://yourdomain.com/success2.html">
+        
+        <div class="form-group">
+          <input type="text" id="full-name" name="full-name" required>
+          <label for="full-name">Full Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" required>
+          <label for="email">Email</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="project-name" name="project-name" required>
+          <label for="project-name">Project Name</label>
+        </div>
+        <div class="form-group">
+          <textarea id="project-description" name="project-description" rows="4" required></textarea>
+          <label for="project-description">Project Description</label>
+        </div>
+        <div class="form-group">
+          <input type="number" id="budget" name="budget" required>
+          <label for="budget">Budget (DA)</label>
+        </div>
+        <div class="form-group">
+          <input type="file" id="business-plan" name="business-plan" accept=".pdf,.doc,.docx">
+          <label for="business-plan">Upload Business Plan</label>
+        </div>
+        <button type="submit" class="btn primary">Submit your project</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 InnovateX. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Remove script.js reference if not needed -->
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnovateX - Web Development </title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="section1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Ensure the footer is at the bottom of the page */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #f4f7f6, #e0e5ec); /* Subtle gradient background */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    main {
+      flex: 1;
+      padding: 2rem;
+    }
+    footer {
+      background: #0A2647; /* Maintain header/footer dark blue */
+      color: #FFFFFF;
+      padding: 0.5rem 0;
+      text-align: center;
+    }
+    /* Form styling matching theme */
+    .registration {
+      background: transparent;
+      padding: 4rem 2rem;
+    }
+    .registration-content {
+      background: #FFFFFF;
+      padding: 2rem;
+      border-radius: 15px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .registration-content:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+    /* Updated button styling */
+    .btn.primary {
+      background: linear-gradient(135deg, #FFD700, #FFA500); /* Gold gradient */
+      color: #0A2647;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .btn.primary:hover {
+      background: linear-gradient(135deg, #FFA500, #FFD700);
+      transform: scale(1.05);
+    }
+    /* Input field styling */
+    .form-group {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 0.8rem;
+      border: 2px solid #0A2647;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+    .form-group input:focus {
+      border-color: #FFD700; /* Gold accent on focus */
+      outline: none;
+    }
+    .form-group label {
+      position: absolute;
+      left: 0.8rem;
+      top: 0.8rem;
+      color: #666;
+      transition: all 0.3s ease;
+      pointer-events: none;
+    }
+    .form-group input:focus + label,
+    .form-group input:not(:placeholder-shown) + label {
+      top: -0.8rem;
+      left: 0.5rem;
+      font-size: 0.8rem;
+      background: white;
+      padding: 0 0.3rem;
+      color: #0A2647;
+    }
+    /* Navigation Bar Styling */
+    nav {
+      background: #0A2647;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    nav .logo {
+      color: #FFD700;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav ul li a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #FFD700; /* Gold accent on hover */
+    }
+    nav .cta-button {
+      background: #FFD700;
+      color: #0A2647;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    nav .cta-button:hover {
+      background: #FFA500;
+      transform: scale(1.05);
+    }
+    /* Footer Styling */
+    footer .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+    footer ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    footer ul li a {
+      color: #FFFFFF;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    footer ul li a:hover {
+      color: #FFD700; /* Gold accent on hover */
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">InnovateX</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="section1.html">For Individuals</a></li>
+      <li><a href="section2.html">For Businesses</a></li>
+      <li><a href="section3.html">For Investors</a></li>
+      <li><a href="section4.html">For Institutions</a></li>
+      <li><a href="section5.html">Education</a></li>
+      <li><a href="section6.html">Shop </a> </li>
+    </ul>
+    <a href="#" class="cta-button">Get Started</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- User Data Input -->
+    <section class="registration">
+      <div class="registration-content">
+        <h2 style="text-align: center; color: #0A2647;">Web Development </h2>
+        <form id="registration-form">
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder=" ">
+            <label for="name">Full Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder=" ">
+            <label for="email">Email</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="graduate" name="graduate" placeholder=" ">
+            <label for="graduate">Graduate</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="skills" name="skills" placeholder=" ">
+            <label for="skills">Skills</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="linkedin" name="linkedin" placeholder=" ">
+            <label for="linkedin">LinkedIn Profile</label>
+          </div>
+          <button type="submit" class="btn primary" style="width: 100%;">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 InnovateX. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

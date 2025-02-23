@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnovateX - For Institutions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* New Color Palette from Color Hunt */
+    body {
+      background-color: #424d2e; /* Olive green */
+      color: #FCE6A0; /* Pale yellow */
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #424d2e; /* Olive green */
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    nav .logo {
+      color: #FCE6A0; /* Pale yellow */
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: #FCE6A0; /* Pale yellow */
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #A4B465; /* Muted olive green */
+    }
+    .cta-button {
+      background-color: #2a3014; /* Muted olive green */
+      color: #FCE6A0; /* Pale yellow */
+      padding: 0.5rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #FFCF50; /* Bright yellow */
+    }
+
+    /* Grid Layout for Category Cards */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-grow: 1;
+    }
+
+    /* Square Medium Boxes */
+    .category-card {
+      background-color: #2a3014; /* Muted olive green */
+      border: 1px solid #FFCF50; /* Bright yellow */
+      border-radius: 15px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      aspect-ratio: 1/1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .category-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+    .category-card a {
+      color: #FCE6A0; /* Pale yellow */
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .category-card i {
+      font-size: 2.5rem;
+      color: #FFCF50; /* Bright yellow */
+      transition: transform 0.3s ease;
+    }
+    .category-card:hover i {
+      transform: rotate(15deg);
+    }
+    .category-card h3 {
+      font-size: 1.25rem;
+      margin: 0;
+      color: #FCE6A0; /* Pale yellow */
+    }
+    .category-card p {
+      font-size: 0.9rem;
+      color: #FCE6A0; /* Pale yellow */
+      margin: 0;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #424d2e; /* Olive green */
+      padding: 1rem;
+      text-align: center;
+      margin-top: auto;
+      position: relative;
+    }
+
+    /* Lamp Icon */
+    .lamp-icon {
+      font-size: 2rem;
+      color: #cac711; /* Pale yellow */
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      bottom: 10px;
+    }
+
+    /* Sticky Note */
+    .sticky-note {
+      position: fixed;
+      background-color: #cac711; /* Pale yellow */
+      padding: 1rem;
+      top: 20px;
+      right: 20px;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+      font-size: 1rem;
+      color: #11130d; /* Olive green */
+    }
+
+    .sticky-note p {
+      margin: 0;
+    }
+
+    .sticky-note h4 {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    .sticky-note .close-btn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: transparent;
+      border: none;
+      font-size: 1.2rem;
+      color: #626F47; /* Olive green */
+    }
+
+    /* Copyright */
+    .copyright {
+      font-size: 0.9rem;
+      color: #FCE6A0; /* Pale yellow */
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">InnovateX</div>
+    <ul>
+    
+    </ul>
+    <a href="index.html" class="cta-button">Go Back</a>
+  </nav>
+
+  <!-- Category Grid -->
+  <div class="category-grid">
+    <div class="category-card">
+      <a href="softdev.html">
+        <i class="fas fa-code"></i>
+        <h3>Software Development</h3>
+        <p>Create innovative solutions through programming and system design.</p>
+      </a>
+    </div>
+
+    <div class="category-card">
+      <a href="cuiart.html">
+        <i class="fas fa-utensils"></i>
+        <h3>Culinary Arts</h3>
+        <p>Master cooking techniques and food innovation strategies.</p>
+      </a>
+    </div>
+
+    <div class="category-card">
+      <a href="health.html">
+        <i class="fas fa-heartbeat"></i>
+        <h3>Healthcare Innovation</h3>
+        <p>Pioneer new medical technologies and treatment methods.</p>
+      </a>
+    </div>
+
+    <div class="category-card">
+      <a href="scientist.html">
+        <i class="fas fa-atom"></i>
+        <h3>Science Research</h3>
+        <p>Explore the fundamental laws of nature and matter.</p>
+      </a>
+    </div>
+
+    <div class="category-card">
+      <a href="financial.html">
+        <i class="fas fa-coins"></i>
+        <h3>Financial Management</h3>
+        <p>Optimize investments and economic strategies.</p>
+      </a>
+    </div>
+
+    <div class="category-card">
+      <a href="legaly.html">
+        <i class="fas fa-balance-scale"></i>
+        <h3>Legal Services</h3>
+        <p>Navigate legal frameworks and property regulations.</p>
+      </a>
+    </div>
+
+    <div class="category-card">
+      <a href="elect.html">
+        <i class="fas fa-blender"></i>
+        <h3>Électroménager</h3>
+        <p>Explore the latest in home appliances and kitchen technology.</p>
+      </a>
+    </div>
+
+    <div class="category-card">
+      <a href="jap.html">
+        <i class="fas fa-language"></i>
+        <h3>Language Studies</h3>
+        <p>Master communication in multiple cultural contexts.</p>
+      </a>
+    </div>
+
+    <div class="category-card">
+      <a href="trav.html">
+        <i class="fas fa-plane"></i>
+        <h3>Travel & Tourism</h3>
+        <p>Explore global destinations and cultural experiences.</p>
+      </a>
+    </div>
+
+    <div class="category-card">
+      <a href="ho.html">
+        <i class="fas fa-hotel"></i>
+        <h3>Hospitality Management</h3>
+        <p>Deliver exceptional guest experiences and optimize hotel operations.</p>
+      </a>
+    </div>
+
+    <div class="category-card">
+      <a href="arch.html">
+        <i class="fas fa-building"></i>
+        <h3>Architectural Design</h3>
+        <p>Innovate in building design and sustainable urban development.</p>
+      </a>
+    </div>
+
+    <div class="category-card">
+      <a href="serv.html">
+        <i class="fas fa-broom"></i>
+        <h3>Facility Services</h3>
+        <p>Ensure clean, safe, and efficient environments for businesses and institutions.</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sticky Note -->
+  <div class="sticky-note" id="stickyNote">
+    <h4>How to Use This Page</h4>
+    <p>To search for a location in Algeria, please follow these steps:</p>
+    <p>1. Select the appropriate category for your search.</p>
+    <p>2. Choose the Wilaya (region) to narrow down the results.</p>
+    <p>This will help you efficiently find the destination you're looking for.</p>
+    <button class="close-btn" onclick="closeStickyNote()">X</button>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <span class="lamp-icon" onclick="toggleStickyNote()">
+      <i class="fas fa-lightbulb"></i>
+    </span>
+    <div class="copyright">
+      &copy; 2025 InnovateX. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Function to toggle the sticky note visibility
+    function toggleStickyNote() {
+      var stickyNote = document.getElementById('stickyNote');
+      stickyNote.style.display = stickyNote.style.display === 'none' ? 'block' : 'none';
+    }
+
+    // Function to close the sticky note manually
+    function closeStickyNote() {
+      var stickyNote = document.getElementById('stickyNote');
+      stickyNote.style.display = 'none';
+    }
+
+    // Show sticky note for 5 seconds when the page loads
+    window.onload = function() {
+      var stickyNote = document.getElementById('stickyNote');
+      stickyNote.style.display = 'block';
+      setTimeout(function() {
+        stickyNote.style.display = 'none';
+      }, 5000);
+    }
+  </script>
+</body>
+</html>

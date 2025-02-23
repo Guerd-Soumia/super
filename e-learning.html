@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Courses</title>
+    <style>
+        /* Color Palette */
+        :root {
+            --primary: #4c4b16;   /* Olive Green */
+            --secondary: #898121; /* Mustard Yellow */
+            --accent: #e6c767;    /* Light Yellow */
+            --light: #4c4b1662;     /* Light Slate Blue */
+            --dark: #4c4b16;      /* Medium Green */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: var(--light);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .back-button-container {
+            background: var(--secondary);
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .go-back-button {
+            background: #74732251;
+            color: var(--primary);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .go-back-button:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .course {
+            margin: 10px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .course h2 {
+            color: var(--primary);
+        }
+
+        .course p {
+            color: #666;
+        }
+
+        .course button {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .course button:hover {
+            background: var(--primary);
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        function selectCourse(course, price) {
+            window.location.href = `e-input.html?course=${encodeURIComponent(course)}&price=${encodeURIComponent(price)}`;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>INNOVATEX</h1>
+        <div class="back-button-container">
+            <a href="section5.html" class="go-back-button">Go Back</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Available E-Learning Courses</h1>
+
+        <div class="course">
+            <h2>Web Development</h2>
+            <p>Price: 25,000 DZD | Duration: 3 Months</p>
+            <button onclick="selectCourse('Web Development', '25000 DZD')">Join</button>
+        </div>
+
+        <div class="course">
+            <h2>Data Science</h2>
+            <p>Price: 30,000 DZD | Duration: 4 Months</p>
+            <button onclick="selectCourse('Data Science', '30000 DZD')">Join</button>
+        </div>
+
+        <div class="course">
+            <h2>Graphic Design</h2>
+            <p>Price: 20,000 DZD | Duration: 2 Months</p>
+            <button onclick="selectCourse('Graphic Design', '20000 DZD')">Join</button>
+        </div>
+
+        <div class="course">
+            <h2>Languages (French, English, Arabic)</h2>
+            <p>Price: 15,000 DZD | Duration: 2 Months</p>
+            <button onclick="selectCourse('Languages', '15000 DZD')">Join</button>
+        </div>
+
+        <div class="course">
+            <h2>Cybersecurity</h2>
+            <p>Price: 35,000 DZD | Duration: 4 Months</p>
+            <button onclick="selectCourse('Cybersecurity', '35000 DZD')">Join</button>
+        </div>
+
+        <div class="course">
+            <h2>Artificial Intelligence</h2>
+            <p>Price: 40,000 DZD | Duration: 5 Months</p>
+            <button onclick="selectCourse('Artificial Intelligence', '40000 DZD')">Join</button>
+        </div>
+
+        <div class="course">
+            <h2>Digital Marketing</h2>
+            <p>Price: 18,000 DZD | Duration: 2 Months</p>
+            <button onclick="selectCourse('Digital Marketing', '18000 DZD')">Join</button>
+        </div>
+
+        <div class="course">
+            <h2>Blockchain Technology</h2>
+            <p>Price: 45,000 DZD | Duration: 6 Months</p>
+            <button onclick="selectCourse('Blockchain Technology', '45000 DZD')">Join</button>
+        </div>
+
+        <div class="course">
+            <h2>Mobile App Development</h2>
+            <p>Price: 28,000 DZD | Duration: 3 Months</p>
+            <button onclick="selectCourse('Mobile App Development', '28000 DZD')">Join</button>
+        </div>
+
+        <div class="course">
+            <h2>Photography</h2>
+            <p>Price: 10,000 DZD | Duration: 1 Month</p>
+            <button onclick="selectCourse('Photography', '10000 DZD')">Join</button>
+        </div>
+
+        <div class="course">
+            <h2>UI/UX Design</h2>
+            <p>Price: 22,000 DZD | Duration: 3 Months</p>
+            <button onclick="selectCourse('UI/UX Design', '22000 DZD')">Join</button>
+        </div>
+
+        <div class="course">
+            <h2>Business Management</h2>
+            <p>Price: 27,000 DZD | Duration: 3 Months</p>
+            <button onclick="selectCourse('Business Management', '27000 DZD')">Join</button>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 INNOVATEX. All rights reserved.
+    </footer>
+</body>
+</html>

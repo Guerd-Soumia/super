@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join a Class - InnovateX</title>
+    <style>
+        /* Color Palette */
+        :root {
+            --primary: #727D73;  /* Grayish Green */
+            --secondary: #AAB99A; /* Light Olive Green */
+            --accent: #D0DDD0;   /* Pale Green */
+            --light: #F0F0D7;   /* Very Light Green */
+        }
+
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--light);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary);
+            width: 100%;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            color: var(--light);
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .go-back-button {
+            background-color: var(--accent);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .go-back-button:hover {
+            background-color: var(--secondary);
+            color: var(--light);
+        }
+
+        /* Form Container Styles */
+        .form-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: var(--light);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h1 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 0.6rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--secondary);
+            border-radius: 5px;
+            font-size: 0.9rem;
+            color: var(--primary);
+        }
+
+        .form-container input:read-only {
+            background-color: #f0f0f0;
+            cursor: not-allowed;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: var(--primary);
+            color: var(--light);
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: var(--secondary);
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            // Populate course and price from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            document.getElementById('course').value = urlParams.get('course') || '';
+            document.getElementById('price').value = urlParams.get('price') || '';
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">InnovateX</a>
+            <a href="e-learning.html" class="go-back-button">Go Back</a>
+        </div>
+    </header>
+
+    <!-- Form Container -->
+    <div class="form-container">
+        <h1>Join Our Class</h1>
+        <form action="https://formspree.io/f/xqaenvbb" method="POST">
+            <!-- Full Name -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Selected Course -->
+            <label for="course">Selected Course:</label>
+            <input type="text" id="course" name="course" readonly>
+
+            <!-- Price -->
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price" readonly>
+
+            <!-- Submit Button -->
+            <button type="submit">Join the Class</button>
+        </form>
+    </div>
+</body>
+</html>

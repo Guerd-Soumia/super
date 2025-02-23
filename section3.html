@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovateX - Section 3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Updated Color Palette */
+        :root {
+            --primary: #2C3930;  /* Dark Green */
+            --secondary: #3F4F44; /* Muted Green */
+            --accent: #A27B5C;    /* Warm Brown */
+            --light: #DCD7C9;    /* Light Beige */
+            --text-light: #DCD7C9; /* Light text color for contrast */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--light);
+            font-family: 'Segoe UI', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            color: var(--light);
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Go Back Button Styles */
+        .go-back-button {
+            background-color: var(--accent);
+            color: var(--light);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .go-back-button:hover {
+            background-color: var(--primary);
+            color: var(--light);
+        }
+
+        /* Category Selection Section */
+        .category-selection {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .registration-content h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+        }
+
+        .category-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .category-card {
+            flex: 1 1 300px;
+            max-width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            background: var(--secondary);
+            color: var(--light);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-decoration: none;
+        }
+
+        .category-card:hover {
+            background-color: var(--accent);
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        .category-card i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        .category-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .category-card p {
+            font-size: 1rem;
+        }
+
+        /* Sticky Note Styles */
+        .sticky-note {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ffc107; /* Yellow background */
+            color: #271f1c;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            width: 250px;
+            font-size: 0.9rem;
+            animation: fadeOut 5s forwards;
+            z-index: 1000;
+            transform-origin: bottom right;
+        }
+
+        .sticky-note::before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 10px;
+            width: 20px;
+            height: 20px;
+            background: #fff3d4;
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
+            transform: rotate(-30deg);
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 1; transform: scale(1); }
+            90% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(0.8); }
+        }
+
+        .sticky-note.show {
+            animation: none;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 10px 0;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-content .lamp-icon {
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            color: #ffc107; /* Yellow color for the lamp icon */
+        }
+
+        .footer-content .lamp-icon:hover {
+            transform: scale(1.2);
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .category-selection {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">InnovateX</a>
+            <nav class="nav-links">
+                <a href="index.html" class="go-back-button">Go Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="category-selection">
+        <div class="registration-content">
+            <h2>Invest In Projects</h2>
+            <div class="category-cards">
+        
+    
+
+                <!-- Private -->
+                <a href="privat.html" class="category-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Private</h3>
+                    <p>Collaborate with private sector projects.</p>
+                </a>
+
+                <!-- Investment Help -->
+                <a href="investment-help.html" class="category-card">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>Investment Help</h3>
+                    <p>Get professional guidance for your investments.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Note -->
+    <div class="sticky-note" id="stickyNote">
+        <strong>How It Works:</strong><br>
+       
+        1. <strong>Private</strong>: Collaborate with private sector projects. We take <strong>5%</strong> of the benefits.<br>
+        2. <strong>Investment Help</strong>: Get professional guidance. We take <strong>7%</strong> of the benefits.<br>
+        <em>Click the lamp icon to see this note again.</em>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 InnovateX. All rights reserved.</p>
+            <div class="lamp-icon" id="lampIcon">
+                <i class="fas fa-lightbulb"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sticky Note Logic
+        const stickyNote = document.getElementById('stickyNote');
+        const lampIcon = document.getElementById('lampIcon');
+
+        // Auto-hide sticky note after 5 seconds
+        setTimeout(() => {
+            stickyNote.style.display = 'none';
+        }, 5000);
+
+        // Show sticky note when lamp icon is clicked
+        lampIcon.addEventListener('click', () => {
+            stickyNote.style.display = 'block';
+            stickyNote.classList.add('show');
+            setTimeout(() => {
+                stickyNote.style.display = 'none';
+                stickyNote.classList.remove('show');
+            }, 5000); // Hide again after 5 seconds
+        });
+    </script>
+</body>
+</html>

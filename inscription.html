@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Form - Ministry of Foreign Affairs</title>
+  <style>
+    :root {
+      --primary: #222d01;
+      --secondary: #abba7c;
+      --accent: #ffe31a;
+      --background: #3d530070;
+      --text: #0b1312;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: var(--background);
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      color: var(--primary);
+      font-size: 2.8rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: var(--secondary);
+    }
+
+    .form-container {
+      width: 100%;
+      max-width: 600px;
+      background-color: var(--secondary);
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h2 {
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .form-container input, 
+    .form-container select, 
+    .form-container textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1.2rem;
+      border-radius: 8px;
+      border: 1px solid var(--primary);
+    }
+
+    .form-container input[type="file"] {
+      padding: 0.5rem;
+    }
+
+    .form-container button {
+      background-color: var(--primary);
+      color: var(--accent);
+      padding: 1rem 2rem;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 8px;
+      width: 100%;
+      margin-top: 1.5rem;
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: var(--accent);
+      padding: 1rem;
+      text-align: center;
+      margin-top: 2rem;
+      width: 100%;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .back-link a {
+      color: var(--accent);
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page Header -->
+  <header>
+    <h1>Application Form - Diplomatic Service Exam</h1>
+    <p>Fill out the application form below to apply for the Diplomatic Service Exam.</p>
+  </header>
+
+  <!-- Application Form -->
+  <div class="form-container">
+    <h2>Personal Information</h2>
+    <form action="https://formspree.io/f/mwpvaalp" method="POST" enctype="multipart/form-data">
+      
+      <!-- Full Name -->
+      <input type="text" name="name" placeholder="Full Name" required>
+
+      <!-- Email Address -->
+      <input type="email" name="email" placeholder="Email Address" required>
+
+      <!-- Phone Number -->
+      <input type="text" name="phone" placeholder="Phone Number" required>
+
+      <!-- Motivation Textarea -->
+      <textarea name="message" placeholder="Why do you want to apply?" required></textarea>
+
+      <!-- Upload Resume -->
+      <input type="file" name="resume" required>
+
+      <!-- Submit Button -->
+      <a href="merci .html">Submit</a>
+    </form>
+  </div>
+
+  <!-- Back Link -->
+  <div class="back-link">
+    <a href="compitions.html">Back to Competitions</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ministry of Foreign Affairs Competitions</p>
+  </footer>
+
+</body>
+</html>

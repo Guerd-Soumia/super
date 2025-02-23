@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Section 5 - InnovateX</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Color Palette */
+    :root {
+      --primary: #4c4b16;   /* Olive Green */
+      --secondary: #898121; /* Mustard Yellow */
+      --accent: #e6c767;    /* Light Yellow */
+      --light: #eef4ef;     /* Light Slate Blue */
+      --dark: #4c4b16;      /* Medium Green */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: radial-gradient(circle at 50% 50%, var(--light) 0%, var(--accent) 100%);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Navigation */
+    nav {
+      background: var(--primary);
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      color: var(--light);
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    nav a {
+      color: var(--light);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background: var(--secondary);
+    }
+
+    /* Category Cards */
+    .category-cards {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      max-width: 900px;
+      margin: 2rem;
+      flex-wrap: wrap;
+      text-align: center;
+      height: 100%; /* This ensures the container takes full available height */
+      flex-grow: 1; /* Allows the container to grow and take the remaining space */
+    }
+
+    .category-card {
+      background: var(--light);
+      border: none;
+      border-radius: 10px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      width: 250px;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      position: relative;
+    }
+
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .category-card i {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .category-card h3 {
+      color: var(--primary);
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .category-card p {
+      color: var(--dark);
+      font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary);
+      color: var(--light);
+      padding: 1rem;
+      margin-top: auto;
+      width: 100%;
+      text-align: center;
+      position: relative;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    footer ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    footer a {
+      color: var(--light);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: var(--secondary);
+    }
+
+    /* Yellow Lamp and Sticker */
+    .yellow-lamp {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      font-size: 2rem;
+      color: #ffc107;
+      cursor: pointer;
+      animation: flicker 1.5s infinite alternate;
+    }
+
+    .yellow-sticker {
+      position: absolute;
+      bottom: 4cm;
+      right: 1rem;
+      background: #ffc107;
+      color: #212121;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 250px;
+      text-align: center;
+      display: none; /* Initially hidden */
+    }
+
+    @keyframes flicker {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.6;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">InnovateX</div>
+    <a href="index.html">Go Back</a>
+  </nav>
+
+  <!-- Category Cards -->
+  <div class="category-cards">
+    <div class="category-card">
+      <a href="acadimic.html" class="category-card">
+        <i class="fas fa-university"></i>
+        <h3>Academic Institutions</h3>
+        <p>Access resources for primary, secondary, and higher education.</p>
+      </a>
+    </div>
+
+    <div class="category-card">
+      <a href="e-learning.html" class="category-card">
+        <i class="fas fa-laptop"></i>
+        <h3>E-learning</h3>
+        <p>Browse online learning courses and resources.</p>
+      </a>
+    </div>
+
+    <div class="category-card">
+      <a href="compitions.html" class="category-card">
+        <i class="fas fa-trophy"></i>
+        <h3>Competitions</h3>
+        <p>Find competitions to participate and enhance your skills.</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Yellow Sticker (Automatically Visible) -->
+  <div class="yellow-sticker" id="yellowSticker">
+    <p>How to use this page:</p>
+    <ul>
+      <li><strong>Academic Resources:</strong> Looking for free academic resources for Primary, Secondary, or University levels? Click on <strong>Academic</strong>.</li>
+      <li><strong>E-learning:</strong> Explore online courses and learning materials in various subjects. Click on <strong>E-learning</strong>.</li>
+      <li><strong>Competitions:</strong> Find competitions to improve your skills or win prizes. Click on <strong>Competitions</strong>.</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 InnovateX. All rights reserved.</p>
+    </div>
+    <div class="yellow-lamp" id="yellowLamp">
+      <i class="fas fa-lightbulb"></i>
+    </div>
+  </footer>
+
+  <script>
+    // JavaScript to handle the visibility of the yellow sticker on page load
+    const yellowSticker = document.getElementById('yellowSticker');
+    
+    // Set a timeout to hide the yellow sticker after 5 seconds
+    setTimeout(function() {
+      yellowSticker.style.display = 'none';
+    }, 5000); // 5000ms = 5 seconds
+
+    // JavaScript to hide the sticker when the yellow lamp is clicked
+    const yellowLamp = document.getElementById('yellowLamp');
+    yellowLamp.addEventListener('click', function() {
+      yellowSticker.style.display = 'none';
+    });
+
+    // Display the yellow sticker when the page loads
+    window.onload = function() {
+      yellowSticker.style.display = 'block';
+    };
+  </script>
+
+</body>
+</html>

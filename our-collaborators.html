@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Collaborators - CuiArt</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Updated Color Palette */
+    :root {
+      --primary: #2C3930; /* Dark Green */
+      --secondary: #3F4F44; /* Deep Sage */
+      --accent: #A27B5C; /* Warm Brown */
+      --light: #DCD7C9; /* Light Sand */
+      --dark: #212121; /* Dark Gray */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: radial-gradient(circle at 50% 50%, var(--light) 0%, #E0E0E0 100%);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav {
+      background: linear-gradient(145deg, var(--primary) 0%, var(--secondary) 100%);
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .logo {
+      color: var(--light);
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* Collaborators Section */
+    .collaborators-container {
+      padding: 2rem;
+      max-width: 1200px;
+      width: 100%;
+      min-height: calc(100vh - 200px);
+    }
+
+    .filter-box {
+      background: var(--light);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+
+    .filter-box h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .filter-box select {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid var(--secondary);
+      border-radius: 5px;
+      font-family: inherit;
+      background: #fff;
+      color: var(--dark);
+      cursor: pointer;
+    }
+
+    .company-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .company-card {
+      background: var(--light);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .company-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      object-fit: contain;
+    }
+
+    .company-card h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .company-card p {
+      color: var(--dark);
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background: var(--primary);
+      color: var(--accent);
+      padding: 0.5rem;
+      width: 100%;
+      text-align: center;
+      font-size: 0.8rem;
+      margin-top: auto;
+      position: relative;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">InnovateX</div>
+    <ul>
+      <li><a href="section8.html">Go Back</a></li>
+    </ul>
+  </nav>
+
+  <div class="collaborators-container">
+    <!-- Filter Box -->
+    <div class="filter-box">
+      <h2>Filter by Domain</h2>
+      <select id="domainFilter">
+        <option value="all">All Domains</option>
+        <option value="culinary">Culinary Arts</option>
+        <option value="physics">Physics & Chemical</option>
+        <option value="healthcare">Healthcare</option>
+        <option value="legal">Legal Institutions</option>
+        <option value="finance">Finance</option>
+        <option value="architecture">Architecture</option>
+        <option value="hospitality">Hospitality</option>
+        <option value="travel">Travel</option>
+        <option value="language">Language</option>
+      </select>
+    </div>
+
+    <!-- Company List -->
+    <div class="company-list" id="companyList">
+      <!-- Culinary Arts Companies -->
+      <div class="company-card" data-domain="culinary">
+        <img src="Institut National de la Formation Professionnelle (INFP).jfif" alt="INFP Logo">
+        <h3>INFP</h3>
+        <p>Institut National de la Formation Professionnelle.</p>
+      </div>
+      <div class="company-card" data-domain="culinary">
+        <img src="ESHRA.png" alt="ESHRA Logo">
+        <h3>ESHRA</h3>
+        <p>Educational and training institution in Algiers.</p>
+      </div>
+      <div class="company-card" data-domain="culinary">
+        <img src="Atelier Cuisine et Vous.png" alt="Atelier Cuisine et Vous Logo">
+        <h3>Atelier Cuisine et Vous</h3>
+        <p>Cooking classes and culinary training.</p>
+      </div>
+      <div class="company-card" data-domain="culinary">
+        <img src="traiteur.png" alt="Traiteur d'Alger Logo">
+        <h3>Traiteur d'Alger</h3>
+        <p>Catering services in Algiers.</p>
+      </div>
+      <div class="company-card" data-domain="culinary">
+        <img src="gourmandise.jfif" alt="Gourmandise Catering Logo">
+        <h3>Gourmandise Catering</h3>
+        <p>Catering services in Oran.</p>
+      </div>
+      <div class="company-card" data-domain="culinary">
+        <img src="Le Palais des Délices.png" alt="Le Palais des Délices Logo">
+        <h3>Le Palais des Délices</h3>
+        <p>Algerian pastries and desserts.</p>
+      </div>
+      <div class="company-card" data-domain="culinary">
+        <img src="Cevital Group.jfif" alt="Cevital Group Logo">
+        <h3>Cevital Group</h3>
+        <p>Food production and distribution.</p>
+      </div>
+      <div class="company-card" data-domain="culinary">
+        <img src="Tizi Ouzou.png" alt="Terroir Producteurs Logo">
+        <h3>Terroir Producteurs</h3>
+        <p>Traditional food products from Tizi Ouzou.</p>
+      </div>
+
+      <!-- Physics & Chemical Companies -->
+      <div class="company-card" data-domain="physics">
+        <img src="Centre de Développement des Technologies Avancées.jfif" alt="CDTA Logo">
+        <h3>CDTA</h3>
+        <p>Centre de Développement des Technologies Avancées.</p>
+      </div>
+      <div class="company-card" data-domain="physics">
+        <img src="Centre de Recherche en Astronomie, Astrophysique et Géophysique.jfif" alt="CRAAG Logo">
+        <h3>CRAAG</h3>
+        <p>Centre de Recherche en Astronomie, Astrophysique et Géophysique.</p>
+      </div>
+      <div class="company-card" data-domain="physics">
+        <img src="Centre de Recherche Nucléaire de Birine.jfif" alt="CRNB Logo">
+        <h3>CRNB</h3>
+        <p>Centre de Recherche Nucléaire de Birine.</p>
+      </div>
+      <div class="company-card" data-domain="physics">
+        <img src="Saidal.jfif" alt="Saidal Group Logo">
+        <h3>Saidal Group</h3>
+        <p>Leading pharmaceutical and chemical company in Algeria.</p>
+      </div>
+      <div class="company-card" data-domain="physics">
+        <img src="ENAFOR.png" alt="ENAFOR Logo">
+        <h3>ENAFOR</h3>
+        <p>Entreprise Nationale des Ferro-Alliages et des Minéraux.</p>
+      </div>
+      <div class="company-card" data-domain="physics">
+        <img src="SONATRACH.png" alt="SONATRACH Logo">
+        <h3>SONATRACH</h3>
+        <p>National oil and gas company with chemical divisions.</p>
+      </div>
+
+      <!-- Healthcare Companies -->
+      <div class="company-card" data-domain="healthcare">
+        <img src="CHU Constantine.jfif" alt="CHU Constantine Logo">
+        <h3>CHU Constantine</h3>
+        <p>University Hospital Center of Constantine.</p>
+      </div>
+      <div class="company-card" data-domain="healthcare">
+        <img src="CHU oran.jfif" alt="CHU Oran Logo">
+        <h3>CHU Oran</h3>
+        <p>University Hospital Center of Oran.</p>
+      </div>
+      <div class="company-card" data-domain="healthcare">
+        <img src="Public Health Establishment of Algeria.jfif" alt="EPSP Logo">
+        <h3>EPSP</h3>
+        <p>Public Health Establishment of Algeria.</p>
+      </div>
+      <div class="company-card" data-domain="healthcare">
+        <img src="Saidal.jfif" alt="Saidal Logo">
+        <h3>Saidal</h3>
+        <p>Leading pharmaceutical company in Algeria.</p>
+      </div>
+      <div class="company-card" data-domain="healthcare">
+        <img src="Biopharm.png" alt="Biopharm Logo">
+        <h3>Biopharm</h3>
+        <p>Specializes in biotechnology and pharmaceuticals.</p>
+      </div>
+      <div class="company-card" data-domain="healthcare">
+        <img src="pharmlab2.png" alt="PharmaLab Logo">
+        <h3>PharmaLab</h3>
+        <p>Research and development in pharmaceuticals.</p>
+      </div>
+
+      <!-- Legal Institutions -->
+      <div class="company-card" data-domain="legal">
+        <img src="Algerian Judicial Council.png" alt="Algerian Judicial Council Logo">
+        <h3>Algerian Judicial Council</h3>
+        <p>Oversees the judiciary and ensures its independence in Algeria.</p>
+      </div>
+      <div class="company-card" data-domain="legal">
+        <img src="Supreme Court of Algeria.png" alt="Supreme Court of Algeria Logo">
+        <h3>Supreme Court of Algeria</h3>
+        <p>The highest judicial authority in Algeria.</p>
+      </div>
+      <div class="company-card" data-domain="legal">
+        <img src="National Bar Association.png" alt="National Bar Association Logo">
+        <h3>National Bar Association</h3>
+        <p>Regulates the legal profession and represents lawyers in Algeria.</p>
+      </div>
+      <div class="company-card" data-domain="legal">
+        <img src="Constitutional Council.png" alt="Constitutional Council Logo">
+        <h3>Constitutional Council</h3>
+        <p>Ensures the constitutionality of laws and regulations.</p>
+      </div>
+      <div class="company-card" data-domain="legal">
+        <img src="Promotes and protects human rights in Algeria.png" alt="National Human Rights Council Logo">
+        <h3>Human Rights Council</h3>
+        <p>Promotes and protects human rights in Algeria.</p>
+      </div>
+      <div class="company-card" data-domain="legal">
+        <img src="Provides training for judges and legal professionals.png" alt="National Institute of Judicial Studies Logo">
+        <h3>Judicial Studies Institute</h3>
+        <p>Provides training for judges and legal professionals.</p>
+      </div>
+
+      <!-- Finance Companies -->
+      <div class="company-card" data-domain="finance">
+        <img src="BNA.jfif" alt="BNA Logo">
+        <h3>BNA</h3>
+        <p>Banque Nationale d'Algérie - Leading public bank in Algeria.</p>
+      </div>
+      <div class="company-card" data-domain="finance">
+        <img src="BADR Bank.jfif" alt="BADR Bank Logo">
+        <h3>BADR Bank</h3>
+        <p>Specialized in Islamic banking and finance.</p>
+      </div>
+      <div class="company-card" data-domain="finance">
+        <img src="CPA.png" alt="CPA Logo">
+        <h3>CPA</h3>
+        <p>Caisse de Prévoyance et d'Assurance - Social security and insurance.</p>
+      </div>
+      <div class="company-card" data-domain="finance">
+        <img src="CNEP Bank.png" alt="CNEP Bank Logo">
+        <h3>CNEP Bank</h3>
+        <p>Banque Extérieure d'Algérie - International banking services.</p>
+      </div>
+      <div class="company-card" data-domain="finance">
+        <img src="Société Générale Algérie.png" alt="Société Générale Algérie Logo">
+        <h3>Société Générale Algérie</h3>
+        <p>International bank with a strong presence in Algeria.</p>
+      </div>
+      <div class="company-card" data-domain="finance">
+        <img src="BDL.png" alt="BDL Logo">
+        <h3>BDL</h3>
+        <p>Banque de Développement Local - Focused on local development financing.</p>
+      </div>
+
+      <!-- Architecture Companies -->
+      <div class="company-card" data-domain="architecture">
+        <img src="ArchiDesign.jfif" alt="ArchiDesign Logo">
+        <h3>ArchiDesign</h3>
+        <p>Leading architectural firm specializing in modern and sustainable designs.</p>
+      </div>
+      <div class="company-card" data-domain="architecture">
+        <img src="UrbanPlan.png" alt="UrbanPlan Logo">
+        <h3>UrbanPlan</h3>
+        <p>Urban planning and architectural consultancy firm based in Algiers.</p>
+      </div>
+      <div class="company-card" data-domain="architecture">
+        <img src="EcoArchitects.png" alt="EcoArchitects Logo">
+        <h3>EcoArchitects</h3>
+        <p>Specializes in eco-friendly and sustainable architectural designs.</p>
+      </div>
+      <div class="company-card" data-domain="architecture">
+        <img src="DesignStudio.png" alt="DesignStudio Logo">
+        <h3>DesignStudio</h3>
+        <p>Creative architectural firm focusing on innovative and artistic designs.</p>
+      </div>
+      <div class="company-card" data-domain="architecture">
+        <img src="BuildConcepts.jfif" alt="BuildConcepts Logo">
+        <h3>BuildConcepts</h3>
+        <p>Provides architectural and construction solutions for residential and commercial projects.</p>
+      </div>
+      <div class="company-card" data-domain="architecture">
+        <img src="GreenArch.jfif" alt="GreenArch Logo">
+        <h3>GreenArch</h3>
+        <p>Focuses on green architecture and sustainable urban development.</p>
+      </div>
+
+      <!-- Hospitality Companies -->
+      <div class="company-card" data-domain="hospitality">
+        <img src="El Aurassi Hotel.jfif" alt="El Aurassi Hotel Logo">
+        <h3>El Aurassi Hotel</h3>
+        <p>Luxurious hotel in Algiers offering premium accommodations and services.</p>
+      </div>
+      <div class="company-card" data-domain="hospitality">
+        <img src="Sheraton Club des Pins.jfif" alt="Sheraton Club des Pins Logo">
+        <h3>Sheraton Club des Pins</h3>
+        <p>5-star resort in Algiers with world-class amenities and beachfront views.</p>
+      </div>
+      <div class="company-card" data-domain="hospitality">
+        <img src="Hilton Algiers.jfif" alt="Hilton Algiers Logo">
+        <h3>Hilton Algiers</h3>
+        <p>Modern hotel in Algiers offering luxury stays and business facilities.</p>
+      </div>
+      <div class="company-card" data-domain="hospitality">
+        <img src="Mercure Alger.png" alt="Mercure Alger Logo">
+        <h3>Mercure Alger</h3>
+        <p>Comfortable hotel in Algiers with a focus on business and leisure travelers.</p>
+      </div>
+      <div class="company-card" data-domain="hospitality">
+        <img src="Radisson Blu Algiers.jfif" alt="Radisson Blu Algiers Logo">
+        <h3>Radisson Blu Algiers</h3>
+        <p>Upscale hotel in Algiers offering premium services and stunning views.</p>
+      </div>
+      <div class="company-card" data-domain="hospitality">
+        <img src="Sofitel Algiers.jfif" alt="Sofitel Algiers Logo">
+        <h3>Sofitel Algiers</h3>
+        <p>Luxury hotel in Algiers with French-inspired elegance and hospitality.</p>
+      </div>
+
+      <!-- Travel Companies -->
+      <div class="company-card" data-domain="travel">
+        <img src="air.png" alt="Air Algérie Logo">
+        <h3>Air Algérie</h3>
+        <p>National airline of Algeria, offering domestic and international flights.</p>
+      </div>
+      <div class="company-card" data-domain="travel">
+        <img src="Algérie Ferries.png" alt="Algérie Ferries Logo">
+        <h3>Algérie Ferries</h3>
+        <p>Provides ferry services connecting Algeria to Europe and other destinations.</p>
+      </div>
+      <div class="company-card" data-domain="travel">
+        <img src="Tassili Airlines.png" alt="Tassili Airlines Logo">
+        <h3>Tassili Airlines</h3>
+        <p>Offers domestic and regional flights across Algeria and neighboring countries.</p>
+      </div>
+      <div class="company-card" data-domain="travel">
+        <img src="journey.png" alt="Voyage Algérie Logo">
+        <h3>Voyage Algérie</h3>
+        <p>Travel agency specializing in tours and travel packages across Algeria.</p>
+      </div>
+      <div class="company-card" data-domain="travel">
+        <img src="Sahara Tours.jfif" alt="Sahara Tours Logo">
+        <h3>Sahara Tours</h3>
+        <p>Specializes in desert tours and adventure travel in the Algerian Sahara.</p>
+      </div>
+      <div class="company-card" data-domain="travel">
+        <img src="Algérie Voyages.jfif" alt="Algérie Voyages Logo">
+        <h3>Algérie Voyages</h3>
+        <p>Offers customized travel packages and visa assistance for Algeria.</p>
+      </div>
+
+      <!-- Language Companies -->
+      <div class="company-card" data-domain="language">
+        <img src="tans.jfif" alt="TransAlgeria Logo">
+        <h3>TransAlgeria</h3>
+        <p>Specializes in translation and localization services for businesses and individuals.</p>
+      </div>
+      <div class="company-card" data-domain="language">
+        <img src="LinguaTech.jfif" alt="LinguaTech Logo">
+        <h3>LinguaTech</h3>
+        <p>Offers language learning platforms and software for educational institutions.</p>
+      </div>
+      <div class="company-card" data-domain="language">
+        <img src="arabi.jfif" alt="ArabiCode Logo">
+        <h3>ArabiCode</h3>
+        <p>Focuses on Arabic language technology, including NLP and text processing.</p>
+      </div>
+      <div class="company-card" data-domain="language">
+        <img src="Polyglot Solutions.jfif" alt="Polyglot Solutions Logo">
+        <h3>Polyglot Solutions</h3>
+        <p>Provides multilingual content creation and language training services.</p>
+      </div>
+      <div class="company-card" data-domain="language">
+        <img src="LinguaSoft.png" alt="LinguaSoft Logo">
+        <h3>LinguaSoft</h3>
+        <p>Develops language learning apps and tools for personal and professional use.</p>
+      </div>
+      <div class="company-card" data-domain="language">
+        <img src="Offers language courses and translation services for individuals and businesses.jfif" alt="TalkAlgeria Logo">
+        <h3>TalkAlgeria</h3>
+        <p>Offers language courses and translation services for individuals and businesses.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 CuiArt. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript to filter companies by domain
+    document.getElementById('domainFilter').addEventListener('change', function () {
+      const selectedDomain = this.value; // Get the selected domain
+      const companyCards = document.querySelectorAll('.company-card'); // Get all company cards
+
+      companyCards.forEach(card => {
+        const cardDomain = card.getAttribute('data-domain'); // Get the domain of the card
+        if (selectedDomain === 'all' || cardDomain === selectedDomain) {
+          card.style.display = 'block'; // Show the card if it matches the filter
+        } else {
+          card.style.display = 'none'; // Hide the card if it doesn't match
+        }
+      });
+    });
+  </script>
+</body>
+</html>

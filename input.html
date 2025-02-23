@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Submission - InnovateX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2C3930;    /* Dark Green */
+            --secondary-color: #3F4F44;  /* Medium Green */
+            --accent-color: #A27B5C;     /* Brown */
+            --light-bg: #DCD7C9;         /* Light Beige */
+        }
+
+        body {
+            background-color: var(--light-bg);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background: var(--primary-color);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--light-bg);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            background: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        input:focus, textarea:focus {
+            outline: 2px solid var(--accent-color);
+            border-color: transparent;
+        }
+
+        .submit-btn {
+            background: var(--accent-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: var(--light-bg);
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">INNOVATEX</div>
+        <button class="back-btn" onclick="window.history.back()">Go Back</button>
+    </nav>
+
+    <div class="container">
+        <h1>Project Submission Form</h1>
+        <form action="https://formspree.io/f/xzzdoqrl" method="POST">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="linkedin">LinkedIn Profile</label>
+                <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/your-profile" required>
+            </div>
+
+            <div class="form-group">
+                <label for="projectDescription">Project Description</label>
+                <textarea id="projectDescription" name="projectDescription" rows="5" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="budget">Estimated Budget (DA)</label>
+                <input type="number" id="budget" name="budget" min="0" step="100" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Project</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 InnovateX. All rights reserved.</p>
+    </footer>
+</body>
+</html>

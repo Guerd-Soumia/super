@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+    <style>
+        /* Reset default margin and padding */
+        body, header {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* New background color */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #C9C58B; /* New softer beige background */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Header */
+        header {
+            background-color: #4C4A10;
+            padding: 15px 20px;
+            text-align: left;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .home-button {
+            background-color: #6D6B32;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .home-button:hover {
+            background-color: #3E3D1A;
+        }
+
+        /* Form container */
+        .form-container {
+            background-color: #4C4A10;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 350px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            text-align: center;
+            color: #f8f5e6;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 16px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            background-color: #C9C58B; /* Updated input background */
+            border: 2px solid #9f8932;
+            color: #4C4A10;
+        }
+
+        /* Button styling */
+        button {
+            width: 50%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-size: 15px;
+            background-color: #6D6B32;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3E3D1A;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 2px;
+        }
+
+        p a {
+            color: #6D6B32;
+            text-decoration: none;
+        }
+
+        p a:hover {
+            color: #3E3D1A;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Home Page Button -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="home-button">Home</a>
+        </div>
+    </header>
+
+    <div class="form-container">
+        <h2>Signin</h2>
+        <form action="../backend/register.php" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+</body>
+</html>

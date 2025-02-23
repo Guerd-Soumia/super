@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnovateX - Culinary Arts</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="section1.css"> <!-- Reuse existing styling -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Body and Background */
+    body {
+      background: linear-gradient(135deg, #44540462, #44540463); /* Warm, culinary-inspired gradient */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* Navigation Bar (Same as section1.html) */
+    nav {
+      background: #445404; /* Dark blue */
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    nav .logo {
+      color: #FFD700; /* Gold */
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav ul li a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #FFD700; /* Gold accent on hover */
+    }
+    nav .cta-button {
+      background: #FFD700; /* Gold */
+      color: #445404;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    nav .cta-button:hover {
+      background: #FFA500; /* Orange on hover */
+      transform: scale(1.05);
+    }
+
+    /* Culinary Subcategories */
+    .category-selection {
+      padding: 4rem 2rem;
+      background: transparent;
+      text-align: center;
+    }
+    .category-selection h2 {
+      color: #445404; /* Dark blue */
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      position: relative;
+      display: inline-block;
+    }
+    .category-selection h2::after {
+      content: '';
+      position: absolute;
+      width: 60%;
+      height: 4px;
+      background: #FFD700; /* Gold underline */
+      bottom: -10px;
+      left: 20%;
+      border-radius: 2px;
+    }
+    .category-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .category-card {
+      background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+      padding: 1.5rem;
+      border-radius: 15px;
+      width: calc(33.33% - 2rem);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      overflow: hidden;
+      position: relative;
+      text-decoration: none; /* Remove underline from link */
+      display: block; /* Make the entire card a block-level element */
+      color: inherit; /* Inherit text color */
+    }
+    .category-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(10, 38, 71, 0.1)); /* Subtle gradient overlay */
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .category-card:hover::before {
+      opacity: 1;
+    }
+    .category-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      background: rgba(255, 255, 255, 1); /* Solid white on hover */
+    }
+    .category-card i {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #445404; /* Dark blue */
+      transition: color 0.3s ease;
+    }
+    .category-card:hover i {
+      color: #FFD700; /* Gold on hover */
+    }
+    .category-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #445404; /* Dark blue */
+      transition: color 0.3s ease;
+    }
+    .category-card:hover h3 {
+      color: #FFD700; /* Gold on hover */
+    }
+    .category-card p {
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    /* Footer (Same as section1.html) */
+    footer {
+      background: #445404; /* Dark blue */
+      color: #FFFFFF;
+      padding: 0.5rem 0;
+      text-align: center;
+    }
+    footer .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+    footer ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    footer ul li a {
+      color: #FFFFFF;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    footer ul li a:hover {
+      color: #FFD700; /* Gold accent on hover */
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      .category-card {
+        width: calc(50% - 1rem);
+        padding: 1rem;
+      }
+      .category-card h3 {
+        font-size: 1.25rem;
+      }
+      .category-card p {
+        font-size: 0.8rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .category-card {
+        width: 100%;
+        padding: 1rem;
+      }
+      .category-card h3 {
+        font-size: 1.1rem;
+      }
+      .category-card p {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">InnovateX</div>
+    <ul>
+      
+    </ul>
+    <a href="section1.html" class="cta-button">Go Back</a>
+  </nav>
+
+  <!-- Culinary Subcategories -->
+  <section class="category-selection">
+    <div class="registration-content">
+      <h2>Culinary Arts Specializations</h2>
+      <div class="category-cards">
+        <!-- Subcategories -->
+        <a href="professional-cooking.html" class="category-card">
+          <i class="fas fa-utensils"></i>
+          <h3>Professional Cooking</h3>
+          <p>Master advanced culinary techniques and kitchen management.</p>
+        </a>
+        <a href="food-innovation.html" class="category-card">
+          <i class="fas fa-seedling"></i>
+          <h3>Food Innovation</h3>
+          <p>Develop sustainable food products and culinary tech solutions.</p>
+        </a>
+        <a href="pastry-baking.html" class="category-card">
+          <i class="fas fa-birthday-cake"></i>
+          <h3>Pastry & Baking</h3>
+          <p>Specialize in artisanal breads, desserts, and confectionery.</p>
+        </a>
+        <a href="nutrition-science.html" class="category-card">
+          <i class="fas fa-apple-alt"></i>
+          <h3>Nutrition Science</h3>
+          <p>Combine culinary skills with dietary health expertise.</p>
+        </a>
+        <a href="food-styling.html" class="category-card">
+          <i class="fas fa-camera-retro"></i>
+          <h3>Food Styling</h3>
+          <p>Learn visual presentation for media and advertising.</p>
+        </a>
+        <a href="culinary-tourism.html" class="category-card">
+          <i class="fas fa-globe"></i>
+          <h3>Culinary Tourism</h3>
+          <p>Explore global cuisines and cultural food experiences.</p>
+        </a>
+        <a href="restaurant-management.html" class="category-card">
+          <i class="fas fa-store-alt"></i>
+          <h3>Restaurant Management</h3>
+          <p>Master hospitality operations and culinary entrepreneurship.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 InnovateX. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Services - Education Hub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* New Color Palette */
+    :root {
+      --primary: #4C4B16;       /* Dark Olive */
+      --secondary: #898121;     /* Olive Green */
+      --accent: #E6C767;        /* Light Gold */
+      --dark: #4a4a4a;          /* Dark Gray */
+      --light: #ffa184be;         /* Coral */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: radial-gradient(circle at 50% 50%, #f87a5333 0%, #f87a532b 100%);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Artistic Header */
+    nav {
+      background: linear-gradient(145deg, var(--primary) 0%, var(--secondary) 100%);
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    nav::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      left: -30px;
+      width: 100px;
+      height: 100px;
+      background: rgba(255,255,255,0.1);
+      transform: rotate(45deg);
+    }
+
+    .logo {
+      color: var(--accent);
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--light);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .cta-button {
+      background: var(--light);
+      color: var(--primary);
+      padding: 0.7rem 1.8rem;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(248, 122, 83, 0.3);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(248, 122, 83, 0.4);
+    }
+
+    /* Main Content */
+    main {
+      flex: 1;
+      padding: 3rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .category-selection {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: var(--primary);
+      font-size: 2.8rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--secondary);
+      border-radius: 2px;
+    }
+
+    .category-cards {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); /* 5 columns */
+      gap: 1rem; /* Reduced gap */
+      padding: 1rem;
+    }
+
+    /* Artistic Cards */
+    .category-card {
+      background: linear-gradient(145deg, #f87a5333 0%, #f87a532b 100%);
+      border-radius: 15px;
+      padding: 1rem;
+      text-align: center;
+      transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .category-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent 20%, rgba(248, 122, 83, 0.1) 100%);
+      transform: rotate(45deg);
+      transition: all 0.6s ease;
+    }
+
+    .category-card:hover {
+      transform: translateY(-8px) rotate(1deg);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+
+    .category-card:hover::before {
+      top: -20%;
+      left: -20%;
+    }
+
+    .category-card i {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 0.8rem;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .category-card:hover i {
+      color: var(--secondary);
+      transform: scale(1.1);
+    }
+
+    .category-card h3 {
+      color: var(--primary);
+      font-size: 1.1rem;
+      margin-bottom: 0.6rem;
+      position: relative;
+    }
+
+    .category-card h3::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: var(--secondary);
+      transition: width 0.3s ease;
+    }
+
+    .category-card:hover h3::after {
+      width: 50%;
+    }
+
+    .category-card p {
+      color: var(--dark);
+      line-height: 1.5;
+      font-size: 0.85rem;
+    }
+
+    /* Modern Footer - Thinner */
+    footer {
+      background: var(--primary);
+      color: var(--accent);
+      padding: 1rem;
+      margin-top: auto;
+      border-top: 3px solid var(--secondary);
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+
+    footer ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: var(--light);
+    }
+
+    @media (max-width: 1200px) {
+      .category-cards {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+      }
+
+      .category-cards {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+      }
+
+      h2 {
+        font-size: 2.2rem;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .category-cards {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">EDUCATION HUB</div>
+    <ul>
+    
+    </ul>
+    <a href="faculty.html" class="cta-button">Go Back</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <section class="category-selection">
+      <h2>Student Services</h2>
+      <div class="category-cards">
+        <!-- Progres Mesrs Dz -->
+        <div class="category-card">
+          <a href="https://progres.mesrs.dz/webfve/login.xhtml" target="_blank">
+            <i class="fas fa-user-graduate"></i>
+            <h3>Progres Mesrs Dz</h3>
+            <p>Access your academic progress and manage your student profile.</p>
+          </a>
+        </div>
+
+        <!-- Progress Dz Doctorat -->
+        <div class="category-card">
+          <a href="https://progres.mesrs.dz/" target="_blank">
+            <i class="fas fa-user-tie"></i>
+            <h3>Progress Dz Doctorat</h3>
+            <p>Manage your doctoral studies and research progress.</p>
+          </a>
+        </div>
+
+        <!-- Progress Epaiement -->
+        <div class="category-card">
+          <a href="https://progres.mesrs.dz/epaiement/epaiementI.xhtml" target="_blank">
+            <i class="fas fa-money-check-alt"></i>
+            <h3>Progress Epaiement</h3>
+            <p>Handle payments and fees for academic services.</p>
+          </a>
+        </div>
+
+        <!-- Progress Minha -->
+        <div class="category-card">
+          <a href="https://progres.mesrs.dz/eminha/login.xhtml" target="_blank">
+            <i class="fas fa-book-open"></i>
+            <h3>Progress Minha</h3>
+            <p>Access your academic records and transcripts.</p>
+          </a>
+        </div>
+
+        <!-- Orientation ESI -->
+        <div class="category-card">
+          <a href="https://www.orientation-esi.dz/" target="_blank">
+            <i class="fas fa-compass"></i>
+            <h3>Orientation ESI</h3>
+            <p>Get guidance and support for your academic and career path.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 Education Hub. All rights reserved.</p>
+      <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="term.html">Terms</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

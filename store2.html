@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store - InnovateX</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Basic Reset */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #2e4b4e3c;
+      color: #333;
+      min-height: 100vh; /* Ensure body takes full viewport height */
+      display: flex;
+      flex-direction: column; /* Stack children vertically */
+    }
+
+    /* Header */
+    header {
+      background-color: #2e4b4e;
+      padding: 1rem;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    /* Go Back Button */
+    .go-back-button {
+      background-color: #32525f;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .go-back-button:hover {
+      background-color: #3a6f78;
+    }
+
+    /* Product Grid */
+    .product-grid {
+      flex: 1; /* Grow to fill available space */
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 boxes per row */
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Product Box */
+    .product-box {
+      background-color: #fff;
+      border: 1px solid #042933;
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      aspect-ratio: 1/1; /* Ensure square shape */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 200px; /* Medium size */
+      width: 100%; /* Ensure responsiveness */
+      margin: 0 auto; /* Center the boxes */
+    }
+
+    .product-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-box img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .product-box h3 {
+      font-size: 1.25rem;
+      margin: 0.5rem 0;
+    }
+
+    .product-box p {
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0.5rem 0;
+    }
+
+    .product-box a {
+      display: inline-block;
+      background-color: #32525f;
+      color: #ffffff;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .product-box a:hover {
+      background-color: #3a6f78;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #3f6b6d;
+      padding: 1rem;
+      text-align: center;
+      color: #fff;
+      margin-top: auto; /* Push footer to the bottom */
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 boxes per row on tablets */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .product-grid {
+        grid-template-columns: 1fr; /* 1 box per row on mobile */
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <a href="section6.html" class="go-back-button">Go Back</a>
+    <h1>InnovateX Store</h1>
+  </header>
+
+  <!-- Product Grid -->
+  <div class="product-grid">
+    <!-- Product 1 -->
+    <div class="product-box">
+      <img src="chef uniform.jfif" alt="Product 1">
+      <h3>Chef Uniforms</h3>
+      <p>5000 da</p>
+      <a href="buy.html?id=1">Buy Now</a>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-box">
+      <img src="waiter.jpg" alt="Product 2">
+      <h3>Waiter Uniforms</h3>
+      <p>95000 da </p>
+      <a href="buy.html?id=2">Buy Now</a>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-box">
+      <img src="plate.jfif" alt="Product 3">
+      <h3>Plates </h3>
+      <p>1500 da per plate</p>
+      <a href="buy.html?id=3">Buy Now</a>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-box">
+      <img src="glass.jfif" alt="Product 4">
+      <h3>Glasswares </h3>
+      <p>500 da per glass</p>
+      <a href="buy.html?id=4">Buy Now</a>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="product-box">
+      <img src="trays.jfif" alt="Product 5">
+      <h3>Serving Trays</h3>
+      <p>1500 da</p>
+      <a href="buy.html?id=5">Buy Now</a>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product-box">
+      <img src="napkins.jfif" alt="Product 6">
+      <h3>Napkins</h3>
+      <p>500 da</p>
+      <a href="buy.html?id=6">Buy Now</a>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="product-box">
+      <img src="fire1.jfif" alt="Product 7">
+      <h3> Fire Extinguisher</h3>
+      <p>25000 da</p>
+      <a href="buy.html?id=7">Buy Now</a>
+    </div>
+
+    <!-- Product 8 -->
+    <div class="product-box">
+      <img src="camer1.jfif" alt="Product 8">
+      <h3>Security Cameras </h3>
+      <p>35000 da </p>
+      <a href="buy.html?id=8">Buy Now</a>
+    </div>
+
+    <!-- Product 9 -->
+    <div class="product-box">
+      <img src="menu1.jpg" alt="Product 9">
+      <h3>Signage (Menu Boards, Outdoor Signs)</h3>
+      <p>12000 da</p>
+      <a href="buy.html?id=9">Buy Now</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 InnovateX. All rights reserved.</p>
+  </footer>
+</body>
+</html>

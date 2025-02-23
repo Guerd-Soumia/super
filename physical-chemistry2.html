@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnovateX - Physics & Chemistry</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="section1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Custom Styles for Physics-Chemistry Page */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background: #033d22; /* Updated to match footer color */
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #305a3167; /* Updated hover color */
+    }
+
+    nav .cta-button {
+      background: #305a3167; /* Updated to muted green with transparency */
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+      cursor: pointer; /* Add pointer cursor for better UX */
+    }
+
+    nav .cta-button:hover {
+      background: #305a3167; /* Same color for hover effect */
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .category-selection {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .category-cards {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .category-card {
+      background: white;
+      border-radius: 15px;
+      padding: 2rem;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .category-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      background: #305a3167; /* Updated to muted green for hover effect */
+    }
+
+    .category-card i {
+      font-size: 3rem;
+      color: #094d27;
+      margin-bottom: 1rem;
+    }
+
+    .category-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #083f3a;
+    }
+
+    .category-card p {
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    .course-highlights {
+      margin-top: 1rem;
+    }
+
+    .course-highlights h4 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: #7d8b83;
+    }
+
+    .course-highlights ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .course-highlights ul li {
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    /* Footer Styles */
+    footer {
+      background: #022917e6;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-content p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .footer-content ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .footer-content ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.8rem;
+    }
+
+    .footer-content ul li a:hover {
+      color: #305a3131; /* Updated hover color */
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">InnovateX</div>
+    <ul>
+      
+    </ul>
+    <a href="privat.html" class="cta-button">Go Back</a>
+  </nav>
+
+  <!-- Physics & Chemistry Section -->
+  <main>
+    <section class="category-selection">
+      <div class="registration-content">
+        <h2>Explore Physics & Chemistry</h2>
+        <div class="category-cards">
+          <!-- Physics Card -->
+          <div class="category-card">
+            <a href="physics2.html" style="text-decoration: none; color: inherit;">
+              <i class="fas fa-atom"></i>
+              <h3>Physics</h3>
+              
+              <div class="course-highlights">
+                
+                
+              </div>
+            </a>
+          </div>
+
+          <!-- Chemistry Card -->
+          <div class="category-card">
+            <a href="chemistry2.html" style="text-decoration: none; color: inherit;">
+              <i class="fas fa-flask"></i>
+              <h3>Chemistry</h3>
+              
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 InnovateX. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // JavaScript to handle the "Get Started" button click
+    document.getElementById('get-started-button').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent the default link behavior
+      alert('Get Started button clicked!'); // Replace this with your desired action
+      // Example: Redirect to a page
+      // window.location.href = 'get-started.html';
+    });
+  </script>
+</body>
+</html>

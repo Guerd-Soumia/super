@@ -1,0 +1,133 @@
+/* Category Selection Section */
+.category-selection {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.registration-content h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.category-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  flex: 1 1 300px;
+  max-width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.category-card i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.category-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.category-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.category-card:hover {
+  background-color: #ffcc00;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #180a43;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-content ul li {
+  margin-left: 20px;
+}
+
+.footer-content ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-content ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Icon Styles */
+.footer-content .social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.footer-content .social-icons a {
+  color: #fff;
+  margin-left: 15px;
+  font-size: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-content .social-icons a:hover {
+  color: #ffcc00;
+  transform: scale(1.2);
+}
+/* Ensure the body and html take up full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make the main content area grow to fill the remaining space */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-selection {
+  flex: 1; /* This makes the category section grow to fill the available space */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #0A2647;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 14px;
+  flex-shrink: 0; /* Prevents the footer from shrinking */
+}
